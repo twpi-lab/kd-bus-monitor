@@ -3,18 +3,23 @@
 """
 import re
 
-from config import BUS_KEYWORDS, TENDER_KEYWORDS, EXCLUDE_KEYWORDS, POLICY_KEYWORDS
+from config import BUS_KEYWORDS, TENDER_KEYWORDS, EXCLUDE_KEYWORDS, POLICY_KEYWORDS, SCHOOL_BUS_KEYWORDS
 
 
 def match_keywords(title: str):
-    """매칭 규칙 (제외 키워드 우선):
-    1) 버스 키워드 AND 입찰 키워드 → 매칭 (입찰 공지)
-    2) 버스 키워드 AND 정책 키워드 → 매칭 (노선/정책 공지)
+    """매칭 규칙 (제외 키워드 우선, 통학버스는 단독 매칭):
+    0) 제외 키워드 포함 → 즉시 비매칭
+    1) 통학버스 키워드 → 단독 매칭 (입찰/정책 키워드 없어도 OK)
+    2) 버스 키워드 AND 입찰 키워드 → 매칭
+    3) 버스 키워드 AND 정책 키워드 → 매칭
     """
     t = title or ""
     for ex in EXCLUDE_KEYWORDS:
         if ex in t:
             return (False, [], [])
+    school = [kw for kw in SCHOOL_BUS_KEYWORDS if kw in t]
+    if school:
+        return (True, school, ["통학버스단독"])
     bus    = [kw for kw in BUS_KEYWORDS    if kw in t]
     tender = [kw for kw in TENDER_KEYWORDS if kw in t]
     if bus and tender:

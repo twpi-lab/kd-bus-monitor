@@ -89,6 +89,29 @@ def print_preview(site_name: str, notices: list):
         print(f"  └─ ... 외 {count - 5}건 더")
 
 
+_DATE_RE = re.compile(r"\d{4}[.\-/]\d{1,2}[.\-/]\d{1,2}")
+
+
+def extract_date(row) -> str:
+    """행에서 날짜를 깨끗하게 추출.
+    1) td.date / td.reg_date / td.regdate 우선
+    2) 위에서 못 찾으면 모든 td 텍스트에 정규식 search
+    3) prefix(예: '등록일 : 2026/05/15')가 붙어도 정규식이 날짜 부분만 추출
+    """
+    for sel in ("td.date", "td.reg_date", "td.regdate"):
+        tag = row.select_one(sel)
+        if tag:
+            txt = tag.get_text(strip=True)
+            m = _DATE_RE.search(txt)
+            return m.group(0) if m else txt
+    for td in row.select("td"):
+        txt = td.get_text(strip=True)
+        m = _DATE_RE.search(txt)
+        if m:
+            return m.group(0)
+    return ""
+
+
 def _build_notice(site_name, title, link, date, fallback_url="") -> dict:
     return {
         "id":           make_id(site_name, link, title, date),
@@ -124,12 +147,8 @@ def parse_default(soup, site) -> list:
         title = tag.get_text(strip=True)
         if not title or len(title) < 2:
             continue
-        link     = abs_link(tag.get("href", ""), site["base"])
-        date_tag = (
-            row.select_one("td.date") or row.select_one("td.reg_date")
-            or row.select_one("td.regdate") or row.select_one("td:last-child")
-        )
-        date = date_tag.get_text(strip=True) if date_tag else ""
+        link = abs_link(tag.get("href", ""), site["base"])
+        date = extract_date(row)
         notices.append(_build_notice(site["name"], title, link, date, site["url"]))
     return notices
 
@@ -148,11 +167,7 @@ def parse_molit(soup, site) -> list:
             continue
         idx  = extract_idx(row, tag)
         link = site["detail_url"].format(idx=idx) if idx else site["url"]
-        date_tag = (
-            row.select_one("td.date") or row.select_one("td.reg_date")
-            or row.select_one("td:last-child")
-        )
-        date = date_tag.get_text(strip=True) if date_tag else ""
+        date = extract_date(row)
         notices.append(_build_notice(site["name"], title, link, date, site["url"]))
     return notices
 
@@ -192,17 +207,7 @@ def parse_gtrans(soup, site) -> list:
         if not link:
             link = site["url"]
 
-        date_tag = (
-            row.select_one("td.date") or row.select_one(".date")
-            or row.select_one("td.reg_date") or row.select_one("td.regdate")
-        )
-        if not date_tag:
-            for td in row.select("td"):
-                txt = td.get_text(strip=True)
-                if re.match(r"[0-9]{4}[.][0-9]{2}[.][0-9]{2}", txt):
-                    date_tag = td
-                    break
-        date = date_tag.get_text(strip=True) if date_tag else ""
+        date = extract_date(row)
         notices.append(_build_notice(site["name"], title, link, date, site["url"]))
     return notices
 
@@ -252,13 +257,7 @@ def fetch_gg_playwright(site: dict) -> list:
             link = abs_link(href, site["base"])
             if not link:
                 link = site["url"]
-            date_tag = (
-                row.select_one("td.td_date")
-                or row.select_one("td.date")
-                or row.select_one("td.reg_date")
-                or row.select_one("td:last-child")
-            )
-            date = date_tag.get_text(strip=True) if date_tag else ""
+            date = extract_date(row)
             notices.append(_build_notice(site["name"], title, link, date))
 
         if not notices:
