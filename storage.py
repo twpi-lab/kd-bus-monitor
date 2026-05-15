@@ -1,0 +1,62 @@
+"""
+JSON 파일 I/O + 발송 이력 관리
+"""
+import json
+import os
+from datetime import datetime
+
+from config import ALL_FILE, SENT_FILE, LOG_FILE
+
+
+def load_json_list(path: str) -> list:
+    if not os.path.exists(path):
+        return []
+    try:
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception:
+        return []
+
+
+def save_json_list(path: str, data: list, max_items: int = None):
+    if max_items and len(data) > max_items:
+        data = data[-max_items:]
+    with open(path, "w", encoding="utf-8") as f:
+        json.dump(data, f, ensure_ascii=False, indent=2)
+
+
+def load_sent_ids() -> dict:
+    """
+    dict{id: timestamp} 형식. 구버전(list[str], list[list])도 흡수.
+    """
+    raw = load_json_list(SENT_FILE)
+    if not raw:
+        return {}
+    if isinstance(raw, list) and raw and isinstance(raw[0], str):
+        return {item: "1970-01-01 00:00:00" for item in raw}
+    if isinstance(raw, list) and raw and isinstance(raw[0], list):
+        return {k: v for k, v in raw}
+    return {}
+
+
+def save_sent_ids(sent: dict):
+    """최신 5000건만 유지 (timestamp 오름차순 기준)"""
+    sorted_items = sorted(sent.items(), key=lambda x: x[1])[-5000:]
+    save_json_list(SENT_FILE, sorted_items)
+
+
+def append_all_notices(new_notices: list) -> int:
+    all_data = load_json_list(ALL_FILE)
+    existing_ids = {n.get("id") for n in all_data}
+    added = 0
+    for n in new_notices:
+        if n["id"] not in existing_ids:
+            all_data.append(n)
+            added += 1
+    save_json_list(ALL_FILE, all_data, max_items=10000)
+    return added
+
+
+def write_log(msg: str):
+    with open(LOG_FILE, "a", encoding="utf-8") as f:
+        f.write(f"[{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}] {msg}\n")

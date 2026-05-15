@@ -1,0 +1,36 @@
+"""
+키워드 매칭 + 긴급도 태그
+"""
+import re
+
+from config import BUS_KEYWORDS, TENDER_KEYWORDS, EXCLUDE_KEYWORDS, POLICY_KEYWORDS
+
+
+def match_keywords(title: str):
+    """매칭 규칙 (제외 키워드 우선):
+    1) 버스 키워드 AND 입찰 키워드 → 매칭 (입찰 공지)
+    2) 버스 키워드 AND 정책 키워드 → 매칭 (노선/정책 공지)
+    """
+    t = title or ""
+    for ex in EXCLUDE_KEYWORDS:
+        if ex in t:
+            return (False, [], [])
+    bus    = [kw for kw in BUS_KEYWORDS    if kw in t]
+    tender = [kw for kw in TENDER_KEYWORDS if kw in t]
+    if bus and tender:
+        return (True, bus, tender)
+    policy = [kw for kw in POLICY_KEYWORDS if kw in t]
+    if bus and policy:
+        return (True, bus, policy)
+    return (False, [], [])
+
+
+def urgency_tag(title: str) -> str:
+    """긴급 키워드 또는 D-7 이내면 🚨 표시"""
+    for w in ["긴급", "즉시", "당일"]:
+        if w in title:
+            return "🚨 긴급 "
+    m = re.search(r"D-(\d+)", title)
+    if m and int(m.group(1)) <= 7:
+        return "🚨 긴급 "
+    return ""

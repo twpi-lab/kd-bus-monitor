@@ -1,0 +1,320 @@
+"""
+입찰공고 사이트 7곳 수집기
+- parser='default'    : 일반 게시판 (양주·의정부)
+- parser='molit'      : 대광위 (idx 추출 + Referer 헤더)
+- parser='gtrans'     : 경기교통공사 (article_seq 추출)
+- parser='playwright' : 경기도 (JS 렌더링)
+"""
+import re
+import time
+import urllib3
+import requests
+from datetime import datetime
+from urllib.parse import urlparse, parse_qs
+from bs4 import BeautifulSoup
+
+import sys
+import os
+# 패키지 외부 모듈(config, storage) 접근을 위해 상위 디렉토리 추가
+sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+
+from config import BASE_HEADERS, MONITOR_URLS  # noqa: E402
+from storage import write_log                   # noqa: E402
+
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# Playwright (경기도청 JS 렌더링용) - 없으면 fetch_notices에서 안내
+try:
+    from playwright.sync_api import sync_playwright
+    PLAYWRIGHT_OK = True
+except ImportError:
+    PLAYWRIGHT_OK = False
+
+
+# ════════════════════════════════════════════
+#  공용 헬퍼
+# ════════════════════════════════════════════
+
+def make_id(site_name: str, link: str, title: str, date: str) -> str:
+    try:
+        parsed = urlparse(link or "")
+        qs = parse_qs(parsed.query)
+        for key in ("not_ancmt_mgt_no", "notAncmtMgtNo", "nttNo", "board_seq", "idx", "id"):
+            if key in qs and qs[key]:
+                return f"{site_name}|{key}={qs[key][0]}"
+    except Exception:
+        pass
+    return f"{site_name}|{title[:40]}|{date}"
+
+
+def abs_link(href: str, base: str) -> str:
+    if not href:
+        return ""
+    h = href.strip()
+    if not h or h.startswith("#") or h.lower().startswith("javascript"):
+        return ""
+    if h.startswith("http"):
+        return h
+    if h.startswith("./"):
+        h = h[2:]
+    return base.rstrip("/") + "/" + h.lstrip("/")
+
+
+def extract_idx(row, tag) -> str:
+    """대광위 onclick 패턴: idx= 또는 fn_xxx('숫자') 모두 인식"""
+    combined = (
+        (tag.get("onclick") or "") +
+        (tag.get("href") or "") +
+        str(row)
+    )
+    m = re.search(r"idx[=\'\"]+(\d+)", combined)
+    if m:
+        return m.group(1)
+    m = re.search(r"fn\w*\s*\(\s*['\"]?\s*(\d+)", combined)
+    if m:
+        return m.group(1)
+    return ""
+
+
+def print_preview(site_name: str, notices: list):
+    count = len(notices)
+    print(f"\n📋 {site_name}: {count}건 확인")
+    if not notices:
+        return
+    for i, n in enumerate(notices[:5]):
+        is_last = (i == min(4, count - 1)) and count <= 5
+        prefix  = "  └─" if is_last else "  ├─"
+        print(f"{prefix} {n['title'][:42]}  ({n['date'][:10] if n['date'] else '-'})")
+    if count > 5:
+        print(f"  └─ ... 외 {count - 5}건 더")
+
+
+def _build_notice(site_name, title, link, date, fallback_url="") -> dict:
+    return {
+        "id":           make_id(site_name, link, title, date),
+        "title":        title,
+        "link":         link or fallback_url,
+        "date":         date,
+        "site":         site_name,
+        "collected_at": datetime.now().strftime("%Y-%m-%d %H:%M:%S"),
+    }
+
+
+# ════════════════════════════════════════════
+#  파서
+# ════════════════════════════════════════════
+
+def parse_default(soup, site) -> list:
+    notices = []
+    rows = (
+        soup.select("table tbody tr")
+        or soup.select("ul.bbs_list li")
+        or soup.select(".board_list tbody tr")
+        or soup.select(".list_wrap li")
+        or soup.select(".tbl_wrap tbody tr")
+    )
+    for row in rows:
+        tag = (
+            row.select_one("td.subject a") or row.select_one("td.title a")
+            or row.select_one("td.tit a")  or row.select_one("td a")
+            or row.select_one("a")
+        )
+        if not tag:
+            continue
+        title = tag.get_text(strip=True)
+        if not title or len(title) < 2:
+            continue
+        link     = abs_link(tag.get("href", ""), site["base"])
+        date_tag = (
+            row.select_one("td.date") or row.select_one("td.reg_date")
+            or row.select_one("td.regdate") or row.select_one("td:last-child")
+        )
+        date = date_tag.get_text(strip=True) if date_tag else ""
+        notices.append(_build_notice(site["name"], title, link, date, site["url"]))
+    return notices
+
+
+def parse_molit(soup, site) -> list:
+    notices = []
+    for row in soup.select("table tbody tr"):
+        tag = (
+            row.select_one("td.title a") or row.select_one("td.subject a")
+            or row.select_one("td a")     or row.select_one("a")
+        )
+        if not tag:
+            continue
+        title = tag.get_text(strip=True)
+        if not title or len(title) < 2:
+            continue
+        idx  = extract_idx(row, tag)
+        link = site["detail_url"].format(idx=idx) if idx else site["url"]
+        date_tag = (
+            row.select_one("td.date") or row.select_one("td.reg_date")
+            or row.select_one("td:last-child")
+        )
+        date = date_tag.get_text(strip=True) if date_tag else ""
+        notices.append(_build_notice(site["name"], title, link, date, site["url"]))
+    return notices
+
+
+def parse_gtrans(soup, site) -> list:
+    notices = []
+    detail_url = site.get("detail_url", "")
+
+    rows = (
+        soup.select("table tbody tr")
+        or soup.select(".board_list tbody tr")
+        or soup.select("ul.bbs_list li")
+        or soup.select(".list_wrap li")
+        or soup.select("ul li")
+    )
+    for row in rows:
+        tag = (
+            row.select_one("td.subject a") or row.select_one("td.title a")
+            or row.select_one(".tit a")    or row.select_one("td a")
+            or row.select_one("a")
+        )
+        if not tag:
+            continue
+        title = tag.get_text(strip=True)
+        if not title or len(title) < 2:
+            continue
+
+        href = tag.get("href", "") or ""
+        link = ""
+        if detail_url:
+            row_html = str(row) + (tag.get("onclick") or "") + href
+            m = re.search(r"article_seq[=,'\"]*([0-9]+)", row_html)
+            if m:
+                link = detail_url.format(seq=m.group(1))
+        if not link:
+            link = abs_link(href, site["base"])
+        if not link:
+            link = site["url"]
+
+        date_tag = (
+            row.select_one("td.date") or row.select_one(".date")
+            or row.select_one("td.reg_date") or row.select_one("td.regdate")
+        )
+        if not date_tag:
+            for td in row.select("td"):
+                txt = td.get_text(strip=True)
+                if re.match(r"[0-9]{4}[.][0-9]{2}[.][0-9]{2}", txt):
+                    date_tag = td
+                    break
+        date = date_tag.get_text(strip=True) if date_tag else ""
+        notices.append(_build_notice(site["name"], title, link, date, site["url"]))
+    return notices
+
+
+def fetch_gg_playwright(site: dict) -> list:
+    """경기도청 — Playwright 헤드리스 chromium으로 JS 렌더링 후 파싱"""
+    if not PLAYWRIGHT_OK:
+        write_log(f"[크롤링오류] {site['name']} | playwright 미설치")
+        return []
+
+    notices = []
+    try:
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=True)
+            page = browser.new_page(
+                user_agent=BASE_HEADERS["User-Agent"],
+                extra_http_headers={"Accept-Language": "ko-KR,ko;q=0.9"},
+            )
+            page.goto(site["url"], timeout=20000, wait_until="networkidle")
+            try:
+                page.wait_for_selector("table tbody tr, .bbs_list li", timeout=10000)
+            except Exception:
+                pass
+            html = page.content()
+            browser.close()
+
+        soup = BeautifulSoup(html, "html.parser")
+        rows = (
+            soup.select("table tbody tr")
+            or soup.select(".bbs_list li")
+            or soup.select(".board_list tbody tr")
+        )
+        for row in rows:
+            tag = (
+                row.select_one("td.td_subject a")
+                or row.select_one("td.subject a")
+                or row.select_one("td.title a")
+                or row.select_one("td a")
+                or row.select_one("a")
+            )
+            if not tag:
+                continue
+            title = tag.get_text(strip=True)
+            if not title or len(title) < 2:
+                continue
+            href = tag.get("href", "")
+            link = abs_link(href, site["base"])
+            if not link:
+                link = site["url"]
+            date_tag = (
+                row.select_one("td.td_date")
+                or row.select_one("td.date")
+                or row.select_one("td.reg_date")
+                or row.select_one("td:last-child")
+            )
+            date = date_tag.get_text(strip=True) if date_tag else ""
+            notices.append(_build_notice(site["name"], title, link, date))
+
+        if not notices:
+            write_log(f"[경기도PW_디버그] 0건 | 렌더링 후 행 수: {len(rows)}")
+    except Exception as e:
+        print(f"  ⚠️  Playwright 오류: {e}")
+        write_log(f"[크롤링오류] {site['name']} | Playwright: {e}")
+    return notices
+
+
+def fetch_notices(site: dict) -> list:
+    if site.get("parser") == "playwright":
+        notices = fetch_gg_playwright(site)
+        print_preview(site["name"], notices)
+        if not notices and not PLAYWRIGHT_OK:
+            print("  ⚠️  playwright 미설치 (pip install playwright && playwright install chromium)")
+        return notices
+
+    headers  = {**BASE_HEADERS, **site.get("extra_headers", {})}
+    max_try  = 3 if site.get("parser") == "molit" else 1
+    last_err = None
+
+    for attempt in range(1, max_try + 1):
+        try:
+            res = requests.get(
+                site["url"], headers=headers,
+                timeout=25, verify=site.get("ssl", True),
+            )
+            res.encoding = "utf-8"
+            soup = BeautifulSoup(res.text, "html.parser")
+
+            parser = site.get("parser", "default")
+            if parser == "molit":
+                notices = parse_molit(soup, site)
+            elif parser == "gtrans":
+                notices = parse_gtrans(soup, site)
+            else:
+                notices = parse_default(soup, site)
+
+            print_preview(site["name"], notices)
+            return notices
+
+        except Exception as e:
+            last_err = e
+            if attempt < max_try:
+                time.sleep(2)
+
+    print(f"\n📋 {site['name']}: 0건 확인")
+    print(f"  ⚠️  크롤링 오류 ({max_try}회 시도): {last_err}")
+    write_log(f"[크롤링오류] {site['name']} | {last_err}")
+    return []
+
+
+def fetch_all() -> list:
+    """모든 사이트 크롤링 → 공고 리스트 반환"""
+    all_notices = []
+    for site in MONITOR_URLS:
+        all_notices.extend(fetch_notices(site))
+    return all_notices
