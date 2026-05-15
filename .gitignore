@@ -1,7 +1,4 @@
-# 런타임 상태 (GitHub Actions에서는 별도 커밋 처리)
-state/*.json
-state/*.txt
-!state/.gitkeep
+# 런타임 상태 — GitHub Actions가 매시간 자동 커밋 (분류 학습용 데이터 누적)
 
 # Python
 __pycache__/
