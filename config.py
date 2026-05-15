@@ -194,7 +194,7 @@ MONITOR_URLS = [
     },
     {
         "name":   "연천군 고시공고",
-        "url":    "https://www.yeoncheon.go.kr/www/selectGosiList.do?key=3393",
+        "url":    "https://www.yeoncheon.go.kr/www/selectGosiList.do?key=3393&not_ancmt_se_code=01",
         "base":   "https://www.yeoncheon.go.kr/www",
         "ssl":    True,
         "parser": "default",
