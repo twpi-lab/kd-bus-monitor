@@ -2,9 +2,11 @@
 텔레그램 발송
 - send_telegram(message): 단건 (호환용)
 - send_batch(items, now_str): 묶음 발송 (긴급/일반 분류, 4000자 분할)
+  → (all_ok, sent_items) 반환 — 부분 성공 시 성공한 items만 sent_ids에 기록 가능
 """
 import time
 import requests
+from html import escape as html_escape
 
 from config import TELEGRAM_BOT_TOKEN, TELEGRAM_CHAT_ID
 from storage import write_log
@@ -47,15 +49,16 @@ def send_telegram(message: str) -> bool:
 
 
 def _format_item(idx: int, notice: dict) -> str:
-    """공고 1건을 메시지 라인 1개로 직렬화"""
-    link = notice.get("link") or "링크 없음"
+    """공고 1건을 메시지 라인 1개로 직렬화 (HTML 안전)"""
+    link  = notice.get("link") or "링크 없음"
     title = notice.get("title", "")
     site  = notice.get("site", "")
     date  = (notice.get("date") or "").strip()
+    # parse_mode=HTML 사용 — 사용자 데이터의 <, >, & 이스케이프 필수
     return (
-        f"<b>{idx}.</b> {title}\n"
-        f"   🏢 {site} | 📅 {date}\n"
-        f"   🔗 {link}"
+        f"<b>{idx}.</b> {html_escape(title)}\n"
+        f"   🏢 {html_escape(site)} | 📅 {html_escape(date)}\n"
+        f"   🔗 {html_escape(link)}"
     )
 
 
@@ -69,7 +72,7 @@ def build_batch_message(items: list, now_str: str) -> str:
 
     lines = [
         f"🔔 <b>[버스/DRT/자율주행 입찰 모니터링]</b>",
-        f"⏰ {now_str}",
+        f"⏰ {html_escape(now_str)}",
         "",
     ]
     idx = 0
@@ -88,38 +91,49 @@ def build_batch_message(items: list, now_str: str) -> str:
     return "\n".join(lines).rstrip()
 
 
-def _split_message(msg: str, limit: int = TELEGRAM_MSG_LIMIT) -> list:
-    """줄 단위로 분할 (HTML 태그가 줄 중간에 닫히지 않는 구조 전제)"""
-    if len(msg) <= limit:
-        return [msg]
-    chunks, cur, cur_len = [], [], 0
-    for line in msg.split("\n"):
-        line_len = len(line) + 1
-        if cur and cur_len + line_len > limit:
-            chunks.append("\n".join(cur))
-            cur, cur_len = [line], line_len
+def _chunk_items(items: list, now_str: str, limit: int = TELEGRAM_MSG_LIMIT) -> list:
+    """
+    items를 텔레그램 길이 한도에 맞춰 청크 단위로 분할.
+    각 청크는 자체적으로 build_batch_message로 완전한 메시지가 되도록 한다.
+    return: [[item, item, ...], [item, ...], ...]
+    """
+    if not items:
+        return []
+    # 한 번에 다 들어가면 단일 청크
+    if len(build_batch_message(items, now_str)) <= limit:
+        return [items]
+    chunks, cur = [], []
+    for it in items:
+        candidate = cur + [it]
+        if cur and len(build_batch_message(candidate, now_str)) > limit:
+            chunks.append(cur)
+            cur = [it]
         else:
-            cur.append(line)
-            cur_len += line_len
+            cur = candidate
     if cur:
-        chunks.append("\n".join(cur))
+        chunks.append(cur)
     return chunks
 
 
-def send_batch(items: list, now_str: str) -> bool:
+def send_batch(items: list, now_str: str):
     """
     items: [{"notice": dict, "is_urgent": bool}, ...]
-    → 묶음 메시지 1건(또는 분할 다건) 발송
-    return: 모든 청크가 성공이면 True
+    → 묶음 메시지 1건(또는 분할 다건) 발송. 청크별 부분 성공 추적.
+    return: (all_ok: bool, sent_items: list)
+        - all_ok       : 모든 청크가 성공했는지
+        - sent_items   : 실제 발송에 성공한 items만 (sent_ids 갱신용)
     """
     if not items:
-        return True
-    msg = build_batch_message(items, now_str)
-    chunks = _split_message(msg)
+        return True, []
+    chunks = _chunk_items(items, now_str)
+    sent_items = []
     all_ok = True
     for i, chunk in enumerate(chunks, 1):
         if len(chunks) > 1:
             print(f"  📤 묶음 {i}/{len(chunks)} 전송 중...")
-        if not send_telegram(chunk):
+        msg = build_batch_message(chunk, now_str)
+        if send_telegram(msg):
+            sent_items.extend(chunk)
+        else:
             all_ok = False
-    return all_ok
+    return all_ok, sent_items

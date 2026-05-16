@@ -64,20 +64,22 @@ def crawl_store_and_notify():
             "is_urgent": bool(urgency_tag(notice["title"])),
         })
 
-    # 2단계: 묶음 메시지 1건으로 발송
+    # 2단계: 묶음 메시지 발송 (청크별 부분 성공 처리)
     found = 0
     if matched:
-        if send_batch(matched, now):
+        all_ok, sent_items = send_batch(matched, now)
+        if sent_items:
             ts = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-            for item in matched:
+            for item in sent_items:
                 n = item["notice"]
                 sent_ids[n["id"]] = ts
                 write_log(f"[알림발송] {n['site']} | {n['title']}")
-            found = len(matched)
+            found = len(sent_items)
             print(f"\n  🚨 묶음 알림 발송: {found}건")
-        else:
-            print("  ❌ 묶음 발송 실패 — 다음 실행 때 재시도")
-            write_log(f"[묶음발송실패] 매칭 {len(matched)}건")
+        if not all_ok:
+            failed = len(matched) - len(sent_items)
+            print(f"  ⚠️  일부 청크 발송 실패: {failed}건은 다음 실행 때 재시도")
+            write_log(f"[묶음발송부분실패] 매칭 {len(matched)}건 중 {failed}건 실패")
 
     save_sent_ids(sent_ids)
 
@@ -155,7 +157,7 @@ def main():
 ╔═══════════════════════════════════════════════════════╗
 ║  🚌 버스/DRT/자율주행 입찰 공고 알림봇 시작!         ║
 ╠═══════════════════════════════════════════════════════╣
-║  📡 모니터링 (총 7곳):                               ║""")
+║  📡 모니터링 (총 15곳):                              ║""")
     for i, s in enumerate(MONITOR_URLS, 1):
         print(f"║     {i}. {s['name']:<48} ║")
     print("""╠═══════════════════════════════════════════════════════╣

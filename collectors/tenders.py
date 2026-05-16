@@ -1,6 +1,6 @@
 """
-입찰공고 사이트 7곳 수집기
-- parser='default'    : 일반 게시판 (양주·의정부)
+입찰공고 사이트 15곳 수집기
+- parser='default'    : 일반 게시판 (양주·의정부 등)
 - parser='molit'      : 대광위 (idx 추출 + Referer 헤더)
 - parser='gtrans'     : 경기교통공사 (article_seq 추출)
 - parser='playwright' : 경기도 (JS 렌더링)
@@ -97,13 +97,15 @@ def extract_date(row) -> str:
     1) td.date / td.reg_date / td.regdate 우선
     2) 위에서 못 찾으면 모든 td 텍스트에 정규식 search
     3) prefix(예: '등록일 : 2026/05/15')가 붙어도 정규식이 날짜 부분만 추출
+    4) 정규식 매칭 실패 시 빈 문자열 (조회수 같은 비날짜 텍스트 오염 방지)
     """
     for sel in ("td.date", "td.reg_date", "td.regdate"):
         tag = row.select_one(sel)
         if tag:
             txt = tag.get_text(strip=True)
             m = _DATE_RE.search(txt)
-            return m.group(0) if m else txt
+            if m:
+                return m.group(0)
     for td in row.select("td"):
         txt = td.get_text(strip=True)
         m = _DATE_RE.search(txt)
@@ -219,6 +221,7 @@ def fetch_gg_playwright(site: dict) -> list:
         return []
 
     notices = []
+    html = ""
     try:
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=True)
@@ -227,8 +230,13 @@ def fetch_gg_playwright(site: dict) -> list:
                 extra_http_headers={"Accept-Language": "ko-KR,ko;q=0.9"},
             )
             page.goto(site["url"], timeout=20000, wait_until="networkidle")
+            # selector 다양화 — 경기도는 .board_list, .tbl_list, ul li 등 여러 패턴 가능
             try:
-                page.wait_for_selector("table tbody tr, .bbs_list li", timeout=10000)
+                page.wait_for_selector(
+                    "table tbody tr, .bbs_list li, .board_list tbody tr, "
+                    ".tbl_list tbody tr, .list_wrap li, ul.list li",
+                    timeout=10000,
+                )
             except Exception:
                 pass
             html = page.content()
@@ -239,12 +247,19 @@ def fetch_gg_playwright(site: dict) -> list:
             soup.select("table tbody tr")
             or soup.select(".bbs_list li")
             or soup.select(".board_list tbody tr")
+            or soup.select(".tbl_list tbody tr")
+            or soup.select(".list_wrap li")
+            or soup.select("ul.list li")
+            or soup.select(".bd_list li")
+            or soup.select("ul.board_ul li")
         )
         for row in rows:
             tag = (
                 row.select_one("td.td_subject a")
                 or row.select_one("td.subject a")
                 or row.select_one("td.title a")
+                or row.select_one(".tit a")
+                or row.select_one(".subject a")
                 or row.select_one("td a")
                 or row.select_one("a")
             )
@@ -262,6 +277,17 @@ def fetch_gg_playwright(site: dict) -> list:
 
         if not notices:
             write_log(f"[경기도PW_디버그] 0건 | 렌더링 후 행 수: {len(rows)}")
+            # HTML 덤프 — 사이트 구조 파악용 (state/는 GitHub Actions가 commit)
+            try:
+                debug_path = os.path.join(
+                    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                    "state", "debug_gg_html.html",
+                )
+                with open(debug_path, "w", encoding="utf-8") as f:
+                    f.write(html or "(empty)")
+                write_log(f"[경기도PW_디버그] HTML 덤프 저장: state/debug_gg_html.html ({len(html)}자)")
+            except Exception as e:
+                write_log(f"[경기도PW_디버그] HTML 덤프 실패: {e}")
     except Exception as e:
         print(f"  ⚠️  Playwright 오류: {e}")
         write_log(f"[크롤링오류] {site['name']} | Playwright: {e}")

@@ -50,8 +50,10 @@ def append_all_notices(new_notices: list) -> int:
     existing_ids = {n.get("id") for n in all_data}
     added = 0
     for n in new_notices:
-        if n["id"] not in existing_ids:
+        nid = n["id"]
+        if nid not in existing_ids:
             all_data.append(n)
+            existing_ids.add(nid)
             added += 1
     save_json_list(ALL_FILE, all_data, max_items=10000)
     return added
