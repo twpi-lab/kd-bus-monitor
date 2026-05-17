@@ -2422,5 +2422,133 @@
     "date": "2026-05-17",
     "site": "포천시 새소식",
     "collected_at": "2026-05-17 08:37:05"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40868",
+    "title": "지적측량기준점(도근점)신설에 따른 고시",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40868&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-18",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-17 16:33:59"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40845",
+    "title": "군관리계획(문화공원)・공원조성계획 결정(변경) 및 실시계획인가(변경) 고시",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40845&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-18",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-17 16:33:59"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40872",
+    "title": "전곡역 주차타워 건립사업 기본 및 실시설계 용역 설계공모 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40872&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-18",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-17 16:33:59"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40859",
+    "title": "2026년 신규농업인 기초영농기술교육 교육생 모집 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40859&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-18",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-17 16:33:59"
+  },
+  {
+    "id": "고양시 고시공고|고양시 공고 제2026-1336호|2026-05-18",
+    "title": "고양시 공고 제2026-1336호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-18",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-17 16:34:01"
+  },
+  {
+    "id": "고양시 고시공고|고양시 공고 제2026-1335호|2026-05-18",
+    "title": "고양시 공고 제2026-1335호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-18",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-17 16:34:01"
+  },
+  {
+    "id": "고양시 고시공고|고양시 덕양구 공고 제2026-459호|2026-05-18",
+    "title": "고양시 덕양구 공고 제2026-459호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-18",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-17 16:34:01"
+  },
+  {
+    "id": "고양시 고시공고|고양시 일산동구 장항2동 공고 제2026-35호|2026-05-18",
+    "title": "고양시 일산동구 장항2동 공고 제2026-35호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-18",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-17 16:34:01"
+  },
+  {
+    "id": "고양시 고시공고|고양시 일산서구 일산1동 공고 제2026-20호|2026-05-18",
+    "title": "고양시 일산서구 일산1동 공고 제2026-20호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-18",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-17 16:34:01"
+  },
+  {
+    "id": "고양시 고시공고|고양시 일산서구 일산1동 공고 제2026-19호|2026-05-18",
+    "title": "고양시 일산서구 일산1동 공고 제2026-19호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-18",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-17 16:34:01"
+  },
+  {
+    "id": "파주시 고시공고|2026년 제3차 경로당 환경개선 사업 모집공고N|2026/05/15",
+    "title": "2026년 제3차 경로당 환경개선 사업 모집공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/15",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-17 16:34:05"
+  },
+  {
+    "id": "남양주시 고시공고|남양주시 골목형상점가 지정 고시(부영상점가)|2026-05-18",
+    "title": "남양주시 골목형상점가 지정 고시(부영상점가)",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86878",
+    "date": "2026-05-18",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-17 16:34:08"
+  },
+  {
+    "id": "남양주시 고시공고|반려견 놀이터 CCTV 설치 행정예고|2026-05-18",
+    "title": "반려견 놀이터 CCTV 설치 행정예고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86870",
+    "date": "2026-05-18",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-17 16:34:08"
+  },
+  {
+    "id": "남양주시 고시공고|행정상 관리주소 이전 직권조치결과 공고(김○○ 외 3인)|2026-05-18",
+    "title": "행정상 관리주소 이전 직권조치결과 공고(김○○ 외 3인)",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86861",
+    "date": "2026-05-18",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-17 16:34:08"
+  },
+  {
+    "id": "남양주시 고시공고|2026년 별내동주민자치센터 강사 공개모집 공고|2026-05-18",
+    "title": "2026년 별내동주민자치센터 강사 공개모집 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86852",
+    "date": "2026-05-18",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-17 16:34:08"
+  },
+  {
+    "id": "남양주시 고시공고|별내5호 근린공원 공원조성계획 변경 결정(안)|2026-05-18",
+    "title": "별내5호 근린공원 공원조성계획 변경 결정(안)",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86839",
+    "date": "2026-05-18",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-17 16:34:08"
   }
 ]

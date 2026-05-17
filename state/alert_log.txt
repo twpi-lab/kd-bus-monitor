@@ -124,3 +124,8 @@ Call log:
 Call log:
   - navigating to "https://www.gg.go.kr/bbs/board.do?bsIdx=469&menuId=1547", waiting until "networkidle"
 
+[2026-05-17 16:33:27] [크롤링오류] 의정부시 고시공고 | HTTPSConnectionPool(host='www.ui4u.go.kr', port=443): Max retries exceeded with url: /portal/saeol/gosiList.do?seCode=01&mId=0301040000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ui4u.go.kr', port=443) at 0x7fa168fbaa50>, 'Connection to www.ui4u.go.kr timed out. (connect timeout=25)'))
+[2026-05-17 16:33:48] [크롤링오류] 경기도 고시공고 | Playwright: Page.goto: Timeout 20000ms exceeded.
+Call log:
+  - navigating to "https://www.gg.go.kr/bbs/board.do?bsIdx=469&menuId=1547", waiting until "networkidle"
+
