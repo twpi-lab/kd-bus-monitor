@@ -129,3 +129,7 @@ Call log:
 Call log:
   - navigating to "https://www.gg.go.kr/bbs/board.do?bsIdx=469&menuId=1547", waiting until "networkidle"
 
+[2026-05-18 12:54:02] [크롤링오류] 경기도 고시공고 | Playwright: Page.goto: Timeout 20000ms exceeded.
+Call log:
+  - navigating to "https://www.gg.go.kr/bbs/board.do?bsIdx=469&menuId=1547", waiting until "networkidle"
+
