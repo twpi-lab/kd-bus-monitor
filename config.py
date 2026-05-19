@@ -142,11 +142,12 @@ MONITOR_URLS = [
         },
     },
     {
-        "name":   "의정부시 고시공고",
-        "url":    "https://www.ui4u.go.kr/portal/saeol/gosiList.do?seCode=01&mId=0301040000",
-        "base":   "https://www.ui4u.go.kr/portal/saeol",
-        "ssl":    False,
-        "parser": "default",
+        "name":       "의정부시 고시공고",
+        "url":        "https://www.ui4u.go.kr/portal/saeol/gosiList.do?seCode=01&mId=0301040000",
+        "base":       "https://www.ui4u.go.kr/portal/saeol",
+        "ssl":        False,
+        "parser":     "default",
+        "detail_url": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo={idx}&mId=0301040000",
     },
     {
         "name":   "경기도 고시공고",

@@ -129,8 +129,18 @@ def _build_notice(site_name, title, link, date, fallback_url="") -> dict:
 #  파서
 # ════════════════════════════════════════════
 
+def _extract_onclick_id(tag) -> str:
+    """onclick="boardView('1','67851')" 등에서 숫자 ID 추출"""
+    onclick = tag.get("onclick", "") or ""
+    m = re.search(r"boardView\s*\(\s*['\"]?\d+['\"]?\s*,\s*['\"]?(\d+)", onclick)
+    if m:
+        return m.group(1)
+    return ""
+
+
 def parse_default(soup, site) -> list:
     notices = []
+    detail_url = site.get("detail_url", "")
     rows = (
         soup.select("table tbody tr")
         or soup.select("ul.bbs_list li")
@@ -149,7 +159,14 @@ def parse_default(soup, site) -> list:
         title = tag.get_text(strip=True)
         if not title or len(title) < 2:
             continue
+        # "새글" 접미사 제거
+        title = re.sub(r"\s*새글\s*$", "", title)
+        # 링크: href 우선, onclick fallback
         link = abs_link(tag.get("href", ""), site["base"])
+        if not link and detail_url:
+            oid = _extract_onclick_id(tag)
+            if oid:
+                link = detail_url.format(idx=oid)
         date = extract_date(row)
         notices.append(_build_notice(site["name"], title, link, date, site["url"]))
     return notices
