@@ -3454,5 +3454,789 @@
     "date": "2026-05-19",
     "site": "남양주시 고시공고",
     "collected_at": "2026-05-18 19:16:02"
+  },
+  {
+    "id": "양주시 고시공고|not_ancmt_mgt_no=66611",
+    "title": "공원조성계획 결정 및 지형도면 고시(소공원(밤나무골)1)",
+    "link": "https://www.yangju.go.kr/www/selectEminwonView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=4075&not_ancmt_mgt_no=66611&ofr_pageSize=10",
+    "date": "2026-05-19",
+    "site": "양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:18"
+  },
+  {
+    "id": "양주시 고시공고|not_ancmt_mgt_no=66610",
+    "title": "공원조성계획 결정 및 지형도면 고시(소공원(삼밭골)1)",
+    "link": "https://www.yangju.go.kr/www/selectEminwonView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=4075&not_ancmt_mgt_no=66610&ofr_pageSize=10",
+    "date": "2026-05-19",
+    "site": "양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:18"
+  },
+  {
+    "id": "양주시 고시공고|not_ancmt_mgt_no=66607",
+    "title": "공원조성계획 결정 및 지형도면 고시(어린이공원(선암)5)",
+    "link": "https://www.yangju.go.kr/www/selectEminwonView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=4075&not_ancmt_mgt_no=66607&ofr_pageSize=10",
+    "date": "2026-05-19",
+    "site": "양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:18"
+  },
+  {
+    "id": "양주시 입찰공고|nttNo=204739",
+    "title": "2026년 군소음피해보상금 이의신청 안내",
+    "link": "https://www.yangju.go.kr/www/selectBbsNttView.do?key=212&bbsNo=13&nttNo=204739&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=",
+    "date": "2026.05.19",
+    "site": "양주시 입찰공고",
+    "collected_at": "2026-05-19 10:48:20"
+  },
+  {
+    "id": "양주시 입찰공고|nttNo=204729",
+    "title": "노야산 훈련장 사격훈련 일정('26.5.26.~5.29.) 안내",
+    "link": "https://www.yangju.go.kr/www/selectBbsNttView.do?key=212&bbsNo=13&nttNo=204729&searchCtgry=&searchCnd=all&searchKrwd=&pageIndex=1&integrDeptCode=",
+    "date": "2026.05.19",
+    "site": "양주시 입찰공고",
+    "collected_at": "2026-05-19 10:48:20"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67851",
+    "title": "도로점용(굴착)허가 내용 공고[제2026-의정부동점용(굴착)-10호, 이○열, 의정부동 7-63(의정부동 6-18)]",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67851&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67837",
+    "title": "담배소매업 폐업 및 소매인지정 신청 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67837&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67850",
+    "title": "주민등록 신고 지연자 최고 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67850&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67842",
+    "title": "신규 주민등록증 발급통지 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67842&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67858",
+    "title": "도로점용(굴착)허가 내용 공고[제2026-신곡점용(굴착)-16호, 신곡동 696(신곡동 685)]",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67858&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67857",
+    "title": "도로점용(굴착)허가 내용 공고[제2026-신곡점용(굴착)-15호, 신곡동 142-5 외 3필지]",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67857&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67838",
+    "title": "2026년 민방위 사이버교육 통지 불능에 따른 공시송달 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67838&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67848",
+    "title": "주민등록 신고지연자에 대한 직권조치 결과 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67848&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67830",
+    "title": "신규 주민등록증 발급통지서 송달불가에 따른 공시송달 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67830&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "의정부시 고시공고|notAncmtMgtNo=67855",
+    "title": "건설기계관리법 위반 과태료 사전통지 공시송달 공고",
+    "link": "https://www.ui4u.go.kr/portal/saeol/gosiView.do?notAncmtMgtNo=67855&mId=0301040000",
+    "date": "2026-05-19",
+    "site": "의정부시 고시공고",
+    "collected_at": "2026-05-19 10:48:31"
+  },
+  {
+    "id": "경기도 고시공고|예약종합공사를 시공하는 건설업종 폐업 공고|2026-05-19",
+    "title": "예약종합공사를 시공하는 건설업종 폐업 공고",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890288&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|예약수원당수 A-5BL 공동주택 미술작품 공모 선정 결과 공고|2026-05-19",
+    "title": "예약수원당수 A-5BL 공동주택 미술작품 공모 선정 결과 공고",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890285&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|예약「건설산업기본법」 위반 건설사업자 행정처분(영업정지) 공고|2026-05-19",
+    "title": "예약「건설산업기본법」 위반 건설사업자 행정처분(영업정지) 공고",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890278&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|2026년 경기도 자원순환마을 만들기 공모사업 마을 선정결과(거점조성 분|2026-05-19",
+    "title": "2026년 경기도 자원순환마을 만들기 공모사업 마을 선정결과(거점조성 분야)",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890260&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|제2차 경기도 공공디자인 진흥계획 수립 공고|2026-05-19",
+    "title": "제2차 경기도 공공디자인 진흥계획 수립 공고",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890275&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|(취소공고)「내자장비(의료용면역형광측정장치, 신종감염병팀) 구매」소액수의|2026-05-19",
+    "title": "(취소공고)「내자장비(의료용면역형광측정장치, 신종감염병팀) 구매」소액수의(물품) 견적제출",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890251&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|계측업 등록 공고(주식회사 지오사이트)|2026-05-19",
+    "title": "계측업 등록 공고(주식회사 지오사이트)",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890250&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|[2026년 경기도형 납품대금 연동제 컨설팅 지원 사업] 참여기업 모집 |2026-05-19",
+    "title": "[2026년 경기도형 납품대금 연동제 컨설팅 지원 사업] 참여기업 모집 공고",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890249&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|제주4·3사건 가족관계등록부 작성(정정) 등의 결정과 관련한 신청사실 통|2026-05-19",
+    "title": "제주4·3사건 가족관계등록부 작성(정정) 등의 결정과 관련한 신청사실 통지 공시송달 공고",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890248&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기도 고시공고|도로구역 결정(변경) 및 지형도면 고시(지방도375호선 파주 어유지리~연|2026-05-19",
+    "title": "도로구역 결정(변경) 및 지형도면 고시(지방도375호선 파주 어유지리~연천 삼화리 위험도로 구조개선사업)",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890247&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 10:48:42"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1752",
+    "title": "2026년 상반기 경기도 광역·시내버스 공공관리제 운송사업자 모집 Q&A(26. 4. 6. 기준)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1752",
+    "date": "2026-04-07",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1751",
+    "title": "2026년「양주시 교통창업지원센터」 교통·모빌리티분야 창업 입주기업 모집 공고",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1751",
+    "date": "2026-04-07",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1741",
+    "title": "2026 경기교통공사 브로슈어",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1741",
+    "date": "2026-04-06",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1739",
+    "title": "'26년 상반기 경기도 광역·시내버스 공공관리제 운송사업 설명자료",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1739",
+    "date": "2026-04-01",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1592",
+    "title": "제1차 경기교통공사 고용평등임금 공시",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1592",
+    "date": "2025-11-11",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1580",
+    "title": "2025 경기교통공사 브로슈어",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1580",
+    "date": "2025-10-29",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1562",
+    "title": "국민신문고 서비스 전산장애에 따른 대체 채널 안내",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1562",
+    "date": "2025-10-13",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1521",
+    "title": "’25년 하반기 경기도 광역·시내버스 공공관리제·마을버스 준공영제 운송사업자 모집 사업설명자료",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1521",
+    "date": "2025-09-11",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1465",
+    "title": "2025년 수시 경기도 광역버스 공공관리제 운송사업자 모집 사업설명자료",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1465",
+    "date": "2025-08-13",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 공지사항|article_seq=1417",
+    "title": "똑타 누적 다운로드 130만 기념! 회원가입 이벤트",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T392C310/A/1/view.do?article_seq=1417",
+    "date": "2025-07-23",
+    "site": "경기교통공사 공지사항",
+    "collected_at": "2026-05-19 10:48:44"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1762",
+    "title": "용역입찰공고(2026년 경기도 광역·시내버스 공공관리제 평가 용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1762",
+    "date": "2026-04-17",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1732",
+    "title": "’26년 상반기 경기도 광역·시내버스 공공관리제 운송사업자 모집 공고",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1732",
+    "date": "2026-03-30",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1711",
+    "title": "용역입찰공고(경기교통공사 버스 운송비용 정산시스템 추가개발 용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1711",
+    "date": "2026-03-10",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1679",
+    "title": "용역입찰공고(용인시 지능형 교통체계(ITS) 고도화사업(3단계) 감리용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1679",
+    "date": "2026-01-15",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1671",
+    "title": "용역입찰재공고(2026년 경기도 광역이동지원시스템 유지관리 용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1671",
+    "date": "2026-01-07",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1670",
+    "title": "용역입찰공고(경기교통공사 성과평가 운영 지원 및 제도 개선 용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1670",
+    "date": "2026-01-05",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1658",
+    "title": "물품입찰공고(강소형 스마트도시 조성사업 DRT 차량(7m급) 구매)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1658",
+    "date": "2025-12-30",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1656",
+    "title": "용역입찰공고(2026년 경기도 똑버스 서비스 플랫폼 CS센터 운영 및 관리 용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1656",
+    "date": "2025-12-24",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1628",
+    "title": "용역입찰공고(2026년 경기도 광역이동지원시스템 유지관리 용역)(정정)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1628",
+    "date": "2025-12-02",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "경기교통공사 입찰공고|article_seq=1627",
+    "title": "용역입찰공고(The 경기패스 어린이청소년 및 어르신 교통비 지원사업 콜센터 운영 용역)",
+    "link": "https://www.gtrans.or.kr/web/lay1/bbs/S1T400C540/A/17/view.do?article_seq=1627",
+    "date": "2025-12-02",
+    "site": "경기교통공사 입찰공고",
+    "collected_at": "2026-05-19 10:48:45"
+  },
+  {
+    "id": "동두천시 고시공고|not_ancmt_mgt_no=44737",
+    "title": "담배소매인 지정신청 공고",
+    "link": "https://www.ddc.go.kr/ddc/selectGosiData.do?key=340&not_ancmt_mgt_no=44737&not_ancmt_se_code=04&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "동두천시 고시공고",
+    "collected_at": "2026-05-19 10:48:48"
+  },
+  {
+    "id": "포천시 새소식|nttNo=797730",
+    "title": "여성회관 6월 특강프로그램 수강생 모집",
+    "link": "https://www.pocheon.go.kr/www/selectBbsNttView.do?bbsNo=18&nttNo=797730&key=3095&pageUnit=10&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "포천시 새소식",
+    "collected_at": "2026-05-19 10:48:51"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40904",
+    "title": "시설공사 수의계약 견적제출 안내공고[2026년 맨발길조성공사(장미공원, 주민커뮤니티센터)]",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40904&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40903",
+    "title": "『경원선 폐철도 활용 기후대응 도시숲 조성사업(청산구간)』 특정공법 선정을 위한 기술제안서 제출 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40903&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40902",
+    "title": "시설공사 수의계약 견적제출 안내공고[연천 호로고루 제초 및 잡목제거공사]",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40902&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40901",
+    "title": "시설공사 수의계약 견적제출 안내공고[연천 당포성 제초 및 잡목제거공사]",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40901&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40900",
+    "title": "『경원선 폐철도 활용 기후대응 도시숲 조성사업(청산구간)』 특정공법 기술제안서 평가위원(후보자) 모집 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40900&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40899",
+    "title": "물품 견적제출 안내공고[2026년 내수면 수산자원조성을 위한 수산종자(다슬기)구입(단가계약)]",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40899&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40894",
+    "title": "용역 소액수의 견적제출 안내 공고[2026년 도시공원 물놀이장 운영 용역]",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40894&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40889",
+    "title": "2026년 연천군 우리동네 맑은공기 패키지 지원사업 후보기업 모집 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40889&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-05-19",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-05-19 10:48:52"
+  },
+  {
+    "id": "고양시 고시공고|고양시 고시 제2026-144호|2026-05-19",
+    "title": "고양시 고시 제2026-144호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 도로건설사업소 차량등록과 고시 제2026-13호|2026-05-19",
+    "title": "고양시 도로건설사업소 차량등록과 고시 제2026-13호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 공고 제2026-1354호|2026-05-19",
+    "title": "고양시 공고 제2026-1354호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 공고 제2026-1349호|2026-05-19",
+    "title": "고양시 공고 제2026-1349호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 일산동구 공고 제2026-527호|2026-05-19",
+    "title": "고양시 일산동구 공고 제2026-527호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 일산동구 공고 제2026-526호|2026-05-19",
+    "title": "고양시 일산동구 공고 제2026-526호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 일산동구 공고 제2026-525호|2026-05-19",
+    "title": "고양시 일산동구 공고 제2026-525호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 덕양구 공고 제2026-483호|2026-05-19",
+    "title": "고양시 덕양구 공고 제2026-483호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 덕양구 공고 제2026-482호|2026-05-19",
+    "title": "고양시 덕양구 공고 제2026-482호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "고양시 고시공고|고양시 덕양구 공고 제2026-481호|2026-05-19",
+    "title": "고양시 덕양구 공고 제2026-481호",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-05-19",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-05-19 10:48:54"
+  },
+  {
+    "id": "파주시 고시공고|주민등록 무단전출자 최고공고N|2026/05/19",
+    "title": "주민등록 무단전출자 최고공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "파주시 고시공고|주민등록 무단전출자에 대한 직권조치 결과 공고N|2026/05/19",
+    "title": "주민등록 무단전출자에 대한 직권조치 결과 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "파주시 고시공고|거주불명등록자의 행정상 관리주소 이전 2차 공고N|2026/05/19",
+    "title": "거주불명등록자의 행정상 관리주소 이전 2차 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "파주시 고시공고|지적기준점 성과 고시N|2026/05/19",
+    "title": "지적기준점 성과 고시N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "파주시 고시공고|파주시 재해영향평가심의위원 공개모집 공고N|2026/05/19",
+    "title": "파주시 재해영향평가심의위원 공개모집 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "파주시 고시공고|사업수행능력평가 참여기술인 업무중복도 공개 공고N|2026/05/19",
+    "title": "사업수행능력평가 참여기술인 업무중복도 공개 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "파주시 고시공고|주정차위반 단속 개시 구간 행정예고N|2026/05/19",
+    "title": "주정차위반 단속 개시 구간 행정예고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/19",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-19 10:48:56"
+  },
+  {
+    "id": "남양주시 고시공고|자동차관리법 위반 이륜자동차 과태료 독촉 반송분 공시송달 공고|2026-05-19",
+    "title": "자동차관리법 위반 이륜자동차 과태료 독촉 반송분 공시송달 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86925",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|자동차관리법 위반 이륜자동차 과태료 사전처분 반송분 공시송달 공고|2026-05-19",
+    "title": "자동차관리법 위반 이륜자동차 과태료 사전처분 반송분 공시송달 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86924",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|도로 무단점용 적치물 행정대집행 계고 및 원상회복 명령 사전통지 공시송달|2026-05-19",
+    "title": "도로 무단점용 적치물 행정대집행 계고 및 원상회복 명령 사전통지 공시송달 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86923",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|가로수 조성・관리 계획 게재 의뢰|2026-05-19",
+    "title": "가로수 조성・관리 계획 게재 의뢰",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86922",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|신규 주민등록증 발급안내 공고|2026-05-19",
+    "title": "신규 주민등록증 발급안내 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86919",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|거주불명자에 대한 주민등록 직권조치 결과 공고|2026-05-19",
+    "title": "거주불명자에 대한 주민등록 직권조치 결과 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86918",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|자동차관리법 위반 과태료 본부과 및 독촉 반송분 공시송달 공고|2026-05-19",
+    "title": "자동차관리법 위반 과태료 본부과 및 독촉 반송분 공시송달 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86916",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|재결서 정본 공시송달 의뢰[154kV 덕소-마석 기설송전선로 권원확보사업|2026-05-19",
+    "title": "재결서 정본 공시송달 의뢰[154kV 덕소-마석 기설송전선로 권원확보사업 3차](25수용1137)",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86912",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "남양주시 고시공고|주민등록법 위반에 따른 과태료 체납에 따른 납부 독촉 반송 공시송달|2026-05-19",
+    "title": "주민등록법 위반에 따른 과태료 체납에 따른 납부 독촉 반송 공시송달",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=86909",
+    "date": "2026-05-19",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-05-19 10:48:58"
+  },
+  {
+    "id": "구리시 고시공고|전문건설업 폐업 공고|2026-05-19",
+    "title": "전문건설업 폐업 공고",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47940&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "구리시 고시공고|전문건설업 등록(신규 업종추가) 공고|2026-05-19",
+    "title": "전문건설업 등록(신규 업종추가) 공고",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47941&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "구리시 고시공고|구리시 주정차위반 과태료 처분사전통지 공시송달공고(2026년 4월 발송분|2026-05-19",
+    "title": "구리시 주정차위반 과태료 처분사전통지 공시송달공고(2026년 4월 발송분...",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47943&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "구리시 고시공고|장애인전용주차구역 위반 과태료 부과 관련 공시송달 공고|2026-05-19",
+    "title": "장애인전용주차구역 위반 과태료 부과 관련 공시송달 공고",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47944&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "구리시 고시공고|도로명주소(부여) 고시|2026-05-19",
+    "title": "도로명주소(부여) 고시",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47928&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "구리시 고시공고|폐기물관리법 위반 과태료 부과 처분 통지 공시송달 공고|2026-05-19",
+    "title": "폐기물관리법 위반 과태료 부과 처분 통지 공시송달 공고",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47936&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "구리시 고시공고|불법 농지에 대한 원상회복 명령 처분사전통지 송달불능에 따른 공시송달 공|2026-05-19",
+    "title": "불법 농지에 대한 원상회복 명령 처분사전통지 송달불능에 따른 공시송달 공...",
+    "link": "https://www.guri.go.kr/www/selectGosiNttView.do?pageUnit=10&pageIndex=1&searchCnd=all&key=387&searchGosiSe=01,04,06&gosiNttNo=47937&searchDeptNm=",
+    "date": "2026-05-19",
+    "site": "구리시 고시공고",
+    "collected_at": "2026-05-19 10:49:00"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55202",
+    "title": "도로구역 결정(변경) 및 지형도면 고시",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55202&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55235",
+    "title": "가평역세권(청평지구) 군관리계획(지구단위계획, 공원조성계획(문화공원 3호)) 결정(변경) 및 지형도면 고시",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55235&not_ancmt_se_code=01",
+    "date": "",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55239",
+    "title": "가평군 자원회수시설 민간투자사업(BTO-a)  제3자 제안공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55239&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55292",
+    "title": "하천점용허가(제2026-58호) 고시",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55292&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55298",
+    "title": "하천점용허가(제2026-59호) 고시",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55298&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55300",
+    "title": "무단방치차량 자진처리안내문 및 명령서 공시송달 공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55300&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55304",
+    "title": "2026년 가평군 먹거리계획 연중생산시설 지원사업 재공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55304&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55316",
+    "title": "공유수면점용허가 사항 고시",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55316&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55318",
+    "title": "도로의 지정 및 변경, 폐지 공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55318&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55320",
+    "title": "이행강제금 부과 처분사전통지 송달불능에 따른 공시송달 공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55320&not_ancmt_se_code=01",
+    "date": "2026-05-19",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-05-19 10:49:02"
   }
 ]
