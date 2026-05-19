@@ -3,9 +3,26 @@ JSON 파일 I/O + 발송 이력 관리
 """
 import json
 import os
+import tempfile
 from datetime import datetime
 
 from config import ALL_FILE, SENT_FILE, LOG_FILE
+
+
+def _atomic_write_json(path: str, data):
+    """임시 파일에 쓴 뒤 os.replace로 원자적 교체 (쓰기 중 중단 시 데이터 보호)"""
+    dir_name = os.path.dirname(path) or "."
+    fd, tmp_path = tempfile.mkstemp(dir=dir_name, suffix=".tmp")
+    try:
+        with os.fdopen(fd, "w", encoding="utf-8") as f:
+            json.dump(data, f, ensure_ascii=False, indent=2)
+        os.replace(tmp_path, path)
+    except BaseException:
+        try:
+            os.unlink(tmp_path)
+        except OSError:
+            pass
+        raise
 
 
 def load_json_list(path: str) -> list:
@@ -21,8 +38,7 @@ def load_json_list(path: str) -> list:
 def save_json_list(path: str, data: list, max_items: int = None):
     if max_items and len(data) > max_items:
         data = data[-max_items:]
-    with open(path, "w", encoding="utf-8") as f:
-        json.dump(data, f, ensure_ascii=False, indent=2)
+    _atomic_write_json(path, data)
 
 
 def load_sent_ids() -> dict:
@@ -50,8 +66,7 @@ def save_sent_ids(sent: dict):
     """최신 5000건만 유지 (timestamp 오름차순 기준). dict로 직접 저장."""
     sorted_items = sorted(sent.items(), key=lambda x: x[1])[-5000:]
     trimmed = dict(sorted_items)
-    with open(SENT_FILE, "w", encoding="utf-8") as f:
-        json.dump(trimmed, f, ensure_ascii=False, indent=2)
+    _atomic_write_json(SENT_FILE, trimmed)
 
 
 def append_all_notices(new_notices: list) -> int:
