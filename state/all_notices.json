@@ -4238,5 +4238,21 @@
     "date": "2026-05-19",
     "site": "가평군 고시공고",
     "collected_at": "2026-05-19 10:49:02"
+  },
+  {
+    "id": "경기도 고시공고|예약환경전문공사업 신규등록|2026-05-19",
+    "title": "예약환경전문공사업 신규등록",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890295&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 11:45:00"
+  },
+  {
+    "id": "경기도 고시공고|예약환경전문공사업 등록취소|2026-05-19",
+    "title": "예약환경전문공사업 등록취소",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=239890294&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-05-19",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-05-19 11:45:00"
   }
 ]
