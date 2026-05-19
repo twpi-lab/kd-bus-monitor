@@ -174,7 +174,11 @@ def parse_default(soup, site) -> list:
 
 def parse_molit(soup, site) -> list:
     notices = []
-    for row in soup.select("table tbody tr"):
+    rows = soup.select("table tbody tr")
+    # 디버그: 첫 행 HTML 구조 기록 (날짜 추출 문제 파악용)
+    if rows and not extract_date(rows[0]):
+        write_log(f"[대광위_디버그] 첫 행 HTML(500자): {str(rows[0])[:500]}")
+    for row in rows:
         tag = (
             row.select_one("td.title a") or row.select_one("td.subject a")
             or row.select_one("td a")     or row.select_one("a")
