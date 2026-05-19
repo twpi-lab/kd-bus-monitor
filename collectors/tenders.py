@@ -214,83 +214,99 @@ def parse_gtrans(soup, site) -> list:
     return notices
 
 
+def _pw_fetch_html(site: dict) -> str:
+    """Playwright로 경기도청 페이지 HTML을 가져온다."""
+    with sync_playwright() as p:
+        browser = p.chromium.launch(headless=True)
+        try:
+            page = browser.new_page(
+                user_agent=BASE_HEADERS["User-Agent"],
+                extra_http_headers={"Accept-Language": "ko-KR,ko;q=0.9"},
+            )
+            page.goto(site["url"], timeout=30000, wait_until="domcontentloaded")
+            # 경기도청은 AJAX로 게시글을 비동기 로드 — 로더가 사라질 때까지 대기
+            try:
+                page.wait_for_selector(
+                    "#boardList tbody tr td a",
+                    timeout=15000,
+                )
+            except Exception:
+                pass
+            return page.content()
+        finally:
+            browser.close()
+
+
 def fetch_gg_playwright(site: dict) -> list:
-    """경기도청 — Playwright 헤드리스 chromium으로 JS 렌더링 후 파싱"""
+    """경기도청 — Playwright 헤드리스 chromium으로 JS 렌더링 후 파싱 (최대 2회 시도)"""
     if not PLAYWRIGHT_OK:
         write_log(f"[크롤링오류] {site['name']} | playwright 미설치")
         return []
 
     notices = []
     html = ""
-    try:
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True)
-            page = browser.new_page(
-                user_agent=BASE_HEADERS["User-Agent"],
-                extra_http_headers={"Accept-Language": "ko-KR,ko;q=0.9"},
-            )
-            page.goto(site["url"], timeout=20000, wait_until="networkidle")
-            # selector 다양화 — 경기도는 .board_list, .tbl_list, ul li 등 여러 패턴 가능
-            try:
-                page.wait_for_selector(
-                    "table tbody tr, .bbs_list li, .board_list tbody tr, "
-                    ".tbl_list tbody tr, .list_wrap li, ul.list li",
-                    timeout=10000,
-                )
-            except Exception:
-                pass
-            html = page.content()
-            browser.close()
+    last_err = None
 
-        soup = BeautifulSoup(html, "html.parser")
-        rows = (
-            soup.select("table tbody tr")
-            or soup.select(".bbs_list li")
-            or soup.select(".board_list tbody tr")
-            or soup.select(".tbl_list tbody tr")
-            or soup.select(".list_wrap li")
-            or soup.select("ul.list li")
-            or soup.select(".bd_list li")
-            or soup.select("ul.board_ul li")
+    for attempt in range(1, 3):
+        try:
+            html = _pw_fetch_html(site)
+            last_err = None
+            break
+        except Exception as e:
+            last_err = e
+            if attempt < 2:
+                time.sleep(3)
+
+    if last_err:
+        print(f"  ⚠️  Playwright 오류 (2회 시도): {last_err}")
+        write_log(f"[크롤링오류] {site['name']} | Playwright(2회): {last_err}")
+        return []
+
+    soup = BeautifulSoup(html, "html.parser")
+    rows = (
+        soup.select("table tbody tr")
+        or soup.select(".bbs_list li")
+        or soup.select(".board_list tbody tr")
+        or soup.select(".tbl_list tbody tr")
+        or soup.select(".list_wrap li")
+        or soup.select("ul.list li")
+        or soup.select(".bd_list li")
+        or soup.select("ul.board_ul li")
+    )
+    for row in rows:
+        tag = (
+            row.select_one("td.td_subject a")
+            or row.select_one("td.subject a")
+            or row.select_one("td.title a")
+            or row.select_one(".tit a")
+            or row.select_one(".subject a")
+            or row.select_one("td a")
+            or row.select_one("a")
         )
-        for row in rows:
-            tag = (
-                row.select_one("td.td_subject a")
-                or row.select_one("td.subject a")
-                or row.select_one("td.title a")
-                or row.select_one(".tit a")
-                or row.select_one(".subject a")
-                or row.select_one("td a")
-                or row.select_one("a")
-            )
-            if not tag:
-                continue
-            title = tag.get_text(strip=True)
-            if not title or len(title) < 2:
-                continue
-            href = tag.get("href", "")
-            link = abs_link(href, site["base"])
-            if not link:
-                link = site["url"]
-            date = extract_date(row)
-            notices.append(_build_notice(site["name"], title, link, date))
+        if not tag:
+            continue
+        title = tag.get_text(strip=True)
+        if not title or len(title) < 2:
+            continue
+        href = tag.get("href", "")
+        link = abs_link(href, site["base"])
+        if not link:
+            link = site["url"]
+        date = extract_date(row)
+        notices.append(_build_notice(site["name"], title, link, date))
 
-        if not notices:
-            write_log(f"[경기도PW_디버그] 0건 | 렌더링 후 행 수: {len(rows)}")
-            # HTML 덤프 — 사이트 구조 파악용 (state/는 GitHub Actions가 commit)
-            try:
-                debug_path = os.path.join(
-                    os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                    "state", "debug_gg_html.html",
-                )
-                with open(debug_path, "w", encoding="utf-8") as f:
-                    f.write(html or "(empty)")
-                write_log(f"[경기도PW_디버그] HTML 덤프 저장: state/debug_gg_html.html ({len(html)}자)")
-            except Exception as e:
-                write_log(f"[경기도PW_디버그] HTML 덤프 실패: {e}")
-    except Exception as e:
-        print(f"  ⚠️  Playwright 오류: {e}")
-        write_log(f"[크롤링오류] {site['name']} | Playwright: {e}")
+    if not notices:
+        write_log(f"[경기도PW_디버그] 0건 | 렌더링 후 행 수: {len(rows)}")
+        try:
+            debug_path = os.path.join(
+                os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                "state", "debug_gg_html.html",
+            )
+            with open(debug_path, "w", encoding="utf-8") as f:
+                f.write(html or "(empty)")
+            write_log(f"[경기도PW_디버그] HTML 덤프 저장: state/debug_gg_html.html ({len(html)}자)")
+        except Exception as e:
+            write_log(f"[경기도PW_디버그] HTML 덤프 실패: {e}")
     return notices
 
 
