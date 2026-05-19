@@ -36,7 +36,20 @@ from storage import append_all_notices, load_sent_ids, save_sent_ids, write_log
 #  메인 루틴
 # ════════════════════════════════════════════
 
+_crawl_lock = threading.Lock()
+
+
 def crawl_store_and_notify():
+    if not _crawl_lock.acquire(blocking=False):
+        print("  ⏳ 이미 실행 중 — 건너뜀")
+        return
+    try:
+        _crawl_store_and_notify_impl()
+    finally:
+        _crawl_lock.release()
+
+
+def _crawl_store_and_notify_impl():
     now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
     print(f"\n{'='*60}")
     print(f"  공고 수집 + 알림 시작: {now}")
