@@ -39,7 +39,7 @@ def make_id(site_name: str, link: str, title: str, date: str) -> str:
     try:
         parsed = urlparse(link or "")
         qs = parse_qs(parsed.query)
-        for key in ("not_ancmt_mgt_no", "notAncmtMgtNo", "nttNo", "board_seq", "idx", "id"):
+        for key in ("not_ancmt_mgt_no", "notAncmtMgtNo", "nttNo", "board_seq", "idx", "id", "article_seq"):
             if key in qs and qs[key]:
                 return f"{site_name}|{key}={qs[key][0]}"
     except Exception:
@@ -303,7 +303,7 @@ def fetch_notices(site: dict) -> list:
         return notices
 
     headers  = {**BASE_HEADERS, **site.get("extra_headers", {})}
-    max_try  = 3 if site.get("parser") == "molit" else 1
+    max_try  = 3 if site.get("parser") == "molit" else 2
     last_err = None
 
     for attempt in range(1, max_try + 1):

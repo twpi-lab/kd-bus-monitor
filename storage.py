@@ -29,20 +29,29 @@ def load_sent_ids() -> dict:
     """
     dict{id: timestamp} 형식. 구버전(list[str], list[list])도 흡수.
     """
-    raw = load_json_list(SENT_FILE)
-    if not raw:
+    if not os.path.exists(SENT_FILE):
         return {}
-    if isinstance(raw, list) and raw and isinstance(raw[0], str):
-        return {item: "1970-01-01 00:00:00" for item in raw}
-    if isinstance(raw, list) and raw and isinstance(raw[0], list):
-        return {k: v for k, v in raw}
+    try:
+        with open(SENT_FILE, "r", encoding="utf-8") as f:
+            raw = json.load(f)
+    except Exception:
+        return {}
+    if isinstance(raw, dict):
+        return raw
+    if isinstance(raw, list) and raw:
+        if isinstance(raw[0], str):
+            return {item: "1970-01-01 00:00:00" for item in raw}
+        if isinstance(raw[0], list) and len(raw[0]) == 2:
+            return {k: v for k, v in raw}
     return {}
 
 
 def save_sent_ids(sent: dict):
-    """최신 5000건만 유지 (timestamp 오름차순 기준)"""
+    """최신 5000건만 유지 (timestamp 오름차순 기준). dict로 직접 저장."""
     sorted_items = sorted(sent.items(), key=lambda x: x[1])[-5000:]
-    save_json_list(SENT_FILE, sorted_items)
+    trimmed = dict(sorted_items)
+    with open(SENT_FILE, "w", encoding="utf-8") as f:
+        json.dump(trimmed, f, ensure_ascii=False, indent=2)
 
 
 def append_all_notices(new_notices: list) -> int:
