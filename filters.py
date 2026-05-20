@@ -6,6 +6,13 @@ import re
 from config import BUS_KEYWORDS, TENDER_KEYWORDS, EXCLUDE_KEYWORDS, POLICY_KEYWORDS, SCHOOL_BUS_KEYWORDS
 
 
+def _kw_in(kw: str, text: str) -> bool:
+    """키워드 포함 검사. 영문 포함 키워드는 대소문자 무시."""
+    if any(c.isascii() and c.isalpha() for c in kw):
+        return kw.lower() in text.lower()
+    return kw in text
+
+
 def match_keywords(title: str):
     """매칭 규칙 (제외 키워드 우선, 통학버스는 단독 매칭):
     0) 제외 키워드 포함 → 즉시 비매칭
@@ -15,16 +22,16 @@ def match_keywords(title: str):
     """
     t = title or ""
     for ex in EXCLUDE_KEYWORDS:
-        if ex in t:
+        if _kw_in(ex, t):
             return (False, [], [])
-    school = [kw for kw in SCHOOL_BUS_KEYWORDS if kw in t]
+    school = [kw for kw in SCHOOL_BUS_KEYWORDS if _kw_in(kw, t)]
     if school:
         return (True, school, ["통학버스단독"])
-    bus    = [kw for kw in BUS_KEYWORDS    if kw in t]
-    tender = [kw for kw in TENDER_KEYWORDS if kw in t]
+    bus    = [kw for kw in BUS_KEYWORDS    if _kw_in(kw, t)]
+    tender = [kw for kw in TENDER_KEYWORDS if _kw_in(kw, t)]
     if bus and tender:
         return (True, bus, tender)
-    policy = [kw for kw in POLICY_KEYWORDS if kw in t]
+    policy = [kw for kw in POLICY_KEYWORDS if _kw_in(kw, t)]
     if bus and policy:
         return (True, bus, policy)
     return (False, [], [])
