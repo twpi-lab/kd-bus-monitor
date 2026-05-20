@@ -209,7 +209,7 @@ MONITOR_URLS = [
         "url":    "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
         "base":   "https://eminwon.goyang.go.kr",
         "ssl":    True,
-        "parser": "default",
+        "parser": "goyang",
     },
     {
         "name":   "파주시 고시공고",

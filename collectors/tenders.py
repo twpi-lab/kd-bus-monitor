@@ -169,6 +169,32 @@ def parse_default(soup, site) -> list:
     return notices
 
 
+def parse_goyang(soup, site) -> list:
+    """고양시 — td.text-left a 에서 실제 제목, searchDetail('ID')에서 고유ID 추출"""
+    notices = []
+    rows = soup.select("table tbody tr")
+    for row in rows:
+        # 실제 제목은 td.text-left 안의 <a>
+        tag = row.select_one("td.text-left a")
+        if not tag:
+            continue
+        title = tag.get_text(strip=True)
+        if not title or len(title) < 2:
+            continue
+        # searchDetail('숫자') 패턴에서 ID 추출
+        href = tag.get("href", "") or ""
+        m = re.search(r"searchDetail\s*\(\s*['\"]?(\d+)", href)
+        mgt_no = m.group(1) if m else ""
+        # POST 전용이라 상세 링크 불가 → 목록 URL 사용, ID만 기록
+        link = site["url"]
+        date = extract_date(row)
+        notice = _build_notice(site["name"], title, link, date, site["url"])
+        if mgt_no:
+            notice["id"] = f"{site['name']}|not_ancmt_mgt_no={mgt_no}"
+        notices.append(notice)
+    return notices
+
+
 def parse_molit(soup, site) -> list:
     notices = []
     rows = soup.select("table tbody tr")
@@ -354,6 +380,8 @@ def fetch_notices(site: dict) -> list:
                 notices = parse_molit(soup, site)
             elif parser == "gtrans":
                 notices = parse_gtrans(soup, site)
+            elif parser == "goyang":
+                notices = parse_goyang(soup, site)
             else:
                 notices = parse_default(soup, site)
 
