@@ -37,6 +37,7 @@ from storage import append_all_notices, load_sent_ids, save_sent_ids, write_log
 # ════════════════════════════════════════════
 
 _crawl_lock = threading.Lock()
+_shutdown = threading.Event()
 
 
 def crawl_store_and_notify():
@@ -137,7 +138,7 @@ def reset_sent():
 
 
 def input_listener():
-    while True:
+    while not _shutdown.is_set():
         try:
             cmd = input().strip().lower()
             if cmd == "t":
@@ -152,7 +153,8 @@ def input_listener():
                 reset_sent()
             elif cmd == "q":
                 print("\n👋 알림봇을 종료합니다.")
-                os._exit(0)
+                _shutdown.set()
+                return
             else:
                 print("  t=즉시테스트 | k=키워드확인 | l=발송로그 | r=알림초기화 | q=종료")
                 print(f"\n명령어 입력 > ", end="", flush=True)
@@ -188,9 +190,10 @@ def main():
 
     th = threading.Thread(target=input_listener, daemon=True)
     th.start()
-    while True:
+    while not _shutdown.is_set():
         schedule.run_pending()
-        time.sleep(30)
+        _shutdown.wait(30)
+    schedule.clear()
 
 
 if __name__ == "__main__":

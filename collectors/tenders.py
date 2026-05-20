@@ -5,21 +5,18 @@
 - parser='gtrans'     : 경기교통공사 (article_seq 추출)
 - parser='playwright' : 경기도 (JS 렌더링)
 """
+import os
 import re
 import time
+from concurrent.futures import ThreadPoolExecutor
 import urllib3
 import requests
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
 from bs4 import BeautifulSoup
 
-import sys
-import os
-# 패키지 외부 모듈(config, storage) 접근을 위해 상위 디렉토리 추가
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-
-from config import BASE_HEADERS, MONITOR_URLS  # noqa: E402
-from storage import write_log                   # noqa: E402
+from config import BASE_HEADERS, MONITOR_URLS
+from storage import write_log
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
@@ -375,8 +372,10 @@ def fetch_notices(site: dict) -> list:
 
 
 def fetch_all() -> list:
-    """모든 사이트 크롤링 → 공고 리스트 반환"""
+    """모든 사이트 병렬 크롤링 → 공고 리스트 반환"""
     all_notices = []
-    for site in MONITOR_URLS:
-        all_notices.extend(fetch_notices(site))
+    with ThreadPoolExecutor(max_workers=5) as executor:
+        results = executor.map(fetch_notices, MONITOR_URLS)
+        for notices in results:
+            all_notices.extend(notices)
     return all_notices
