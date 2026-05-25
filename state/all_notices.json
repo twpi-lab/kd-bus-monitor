@@ -6942,5 +6942,21 @@
     "date": "2026-05-24",
     "site": "포천시 새소식",
     "collected_at": "2026-05-24 08:03:13"
+  },
+  {
+    "id": "파주시 고시공고|전문건설업 등록 공고|2026/05/21",
+    "title": "전문건설업 등록 공고",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/21",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-25 12:03:04"
+  },
+  {
+    "id": "파주시 고시공고|주민등록 무단전출자 최고공고|2026/05/21",
+    "title": "주민등록 무단전출자 최고공고",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/05/21",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-05-25 12:03:04"
   }
 ]
