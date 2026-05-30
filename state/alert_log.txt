@@ -153,3 +153,4 @@ Call log:
 [2026-05-28 11:53:19] [알림발송] 연천군 고시공고 | 기술용역 (긴급)입찰공고[군도7호선 외 4개노선 도로확포장공사 소규모환경영향평가용역]
 [2026-05-28 11:53:19] [알림발송] 연천군 고시공고 | 용역 소액수의 견적제출 안내 공고[군도7호선 외 4개노선 도로확포장공사 소규모재해영향평가용역]
 [2026-05-29 23:12:29] [크롤링오류] 의정부시 고시공고 | HTTPSConnectionPool(host='www.ui4u.go.kr', port=443): Max retries exceeded with url: /portal/saeol/gosiList.do?seCode=01&mId=0301040000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ui4u.go.kr', port=443) at 0x7f03e2ff9670>, 'Connection to www.ui4u.go.kr timed out. (connect timeout=25)'))
+[2026-05-30 04:08:15] [크롤링오류] 의정부시 고시공고 | HTTPSConnectionPool(host='www.ui4u.go.kr', port=443): Max retries exceeded with url: /portal/saeol/gosiList.do?seCode=01&mId=0301040000 (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.ui4u.go.kr', port=443) at 0x7f1a681b5fa0>, 'Connection to www.ui4u.go.kr timed out. (connect timeout=25)'))
