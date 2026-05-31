@@ -372,6 +372,7 @@ def fetch_notices(site: dict) -> list:
                 site["url"], headers=headers,
                 timeout=25, verify=site.get("ssl", True),
             )
+            res.raise_for_status()
             res.encoding = "utf-8"
             soup = BeautifulSoup(res.text, "html.parser")
 

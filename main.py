@@ -15,6 +15,7 @@ import sys
 import time
 import threading
 from datetime import datetime
+from zoneinfo import ZoneInfo
 
 # Windows 콘솔(cp949)에서도 이모지 출력 가능하도록 UTF-8로 재구성
 try:
@@ -29,7 +30,9 @@ from config import ALERT_TIME, MONITOR_URLS, LOG_FILE, SENT_FILE, BUS_KEYWORDS, 
 from collectors.tenders import fetch_all
 from filters import match_keywords, urgency_tag
 from notifier import send_batch
-from storage import append_all_notices, load_sent_ids, save_sent_ids, write_log
+from storage import append_all_notices, load_sent_ids, save_sent_ids, save_run_status, write_log
+
+KST = ZoneInfo("Asia/Seoul")
 
 
 # ════════════════════════════════════════════
@@ -51,7 +54,8 @@ def crawl_store_and_notify():
 
 
 def _crawl_store_and_notify_impl():
-    now = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    run_dt = datetime.now(KST)
+    now = run_dt.strftime("%Y-%m-%d %H:%M:%S")
     print(f"\n{'='*60}")
     print(f"  공고 수집 + 알림 시작: {now}")
     print(f"{'='*60}")
@@ -96,6 +100,15 @@ def _crawl_store_and_notify_impl():
             write_log(f"[묶음발송부분실패] 매칭 {len(matched)}건 중 {failed}건 실패")
 
     save_sent_ids(sent_ids)
+    save_run_status({
+        "ran_at_kst": now,
+        "weekday": run_dt.weekday(),
+        "is_weekend": run_dt.weekday() >= 5,
+        "total_crawled": total_crawled,
+        "added": added,
+        "matched": len(matched),
+        "sent": found,
+    })
 
     print(f"\n{'─'*60}")
     print(f"  크롤링: {total_crawled}건 | 새 저장: {added}건 | 알림 발송: {found}건")
