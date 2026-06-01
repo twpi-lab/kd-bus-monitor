@@ -10886,5 +10886,61 @@
     "date": "2026-06-01",
     "site": "남양주시 고시공고",
     "collected_at": "2026-06-01 05:04:14"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=40997",
+    "title": "2026년 연천군 자체우수제안 선정을 위한 사전공시",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=40997&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-06-01",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-06-01 05:43:20"
+  },
+  {
+    "id": "고양시 고시공고|not_ancmt_mgt_no=146527",
+    "title": "건축법 위반관련 공시송달 공고(하천)",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-06-01",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-06-01 05:43:20"
+  },
+  {
+    "id": "고양시 고시공고|not_ancmt_mgt_no=146525",
+    "title": "건축법 위반관련 공시송달 공고",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-06-01",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-06-01 05:43:20"
+  },
+  {
+    "id": "고양시 고시공고|not_ancmt_mgt_no=146515",
+    "title": "건축법 위반관련 공시송달 공고",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-06-01",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-06-01 05:43:20"
+  },
+  {
+    "id": "고양시 고시공고|not_ancmt_mgt_no=146517",
+    "title": "주민등록 무단전출 최고공고",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-06-01",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-06-01 05:43:20"
+  },
+  {
+    "id": "고양시 고시공고|not_ancmt_mgt_no=146530",
+    "title": "주민등록 무단전출자 직권조치 결과 공고",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-06-01",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-06-01 05:43:20"
+  },
+  {
+    "id": "파주시 고시공고|주민등록 업무 관련 개인정보 제3자 제공 사실 공고N|2026/06/01",
+    "title": "주민등록 업무 관련 개인정보 제3자 제공 사실 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/06/01",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-06-01 05:43:22"
   }
 ]
