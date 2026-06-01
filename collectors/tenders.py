@@ -9,7 +9,6 @@ import os
 import re
 import time
 from concurrent.futures import ThreadPoolExecutor
-import urllib3
 import requests
 from datetime import datetime
 from urllib.parse import urlparse, parse_qs
@@ -17,8 +16,6 @@ from bs4 import BeautifulSoup
 
 from config import BASE_HEADERS, MONITOR_URLS
 from storage import write_log
-
-urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 # Playwright (경기도청 JS 렌더링용) - 없으면 fetch_notices에서 안내
 try:
