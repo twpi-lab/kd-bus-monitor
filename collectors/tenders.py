@@ -360,14 +360,17 @@ def fetch_notices(site: dict) -> list:
         return notices
 
     headers  = {**BASE_HEADERS, **site.get("extra_headers", {})}
-    max_try  = 3 if site.get("parser") == "molit" else 2
+    max_try  = int(site.get("max_try", 3 if site.get("parser") == "molit" else 2))
+    timeout  = site.get("timeout", 25)
+    retry_delay = site.get("retry_delay", 2)
+    retry_backoff = site.get("retry_backoff", 1)
     last_err = None
 
     for attempt in range(1, max_try + 1):
         try:
             res = requests.get(
                 site["url"], headers=headers,
-                timeout=25, verify=site.get("ssl", True),
+                timeout=timeout, verify=site.get("ssl", True),
             )
             res.raise_for_status()
             res.encoding = "utf-8"
@@ -389,7 +392,7 @@ def fetch_notices(site: dict) -> list:
         except Exception as e:
             last_err = e
             if attempt < max_try:
-                time.sleep(2)
+                time.sleep(retry_delay * (retry_backoff ** (attempt - 1)))
 
     print(f"\n📋 {site['name']}: 0건 확인")
     print(f"  ⚠️  크롤링 오류 ({max_try}회 시도): {last_err}")

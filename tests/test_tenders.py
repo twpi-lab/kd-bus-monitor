@@ -1,7 +1,14 @@
 """collectors/tenders.py 헬퍼 함수 단위 테스트"""
 import pytest
 from bs4 import BeautifulSoup
-from collectors.tenders import make_id, abs_link, extract_date, extract_idx, parse_default
+from collectors.tenders import (
+    make_id,
+    abs_link,
+    extract_date,
+    extract_idx,
+    parse_default,
+    fetch_notices,
+)
 
 
 class TestMakeId:
@@ -124,3 +131,52 @@ class TestParseDefault:
         soup = BeautifulSoup(html, "html.parser")
         site = {"name": "테스트", "url": "https://example.com", "base": "https://example.com"}
         assert parse_default(soup, site) == []
+
+
+class TestFetchNoticesRetry:
+    def test_site_retry_settings_control_attempts_and_backoff(self, monkeypatch):
+        calls = []
+        sleeps = []
+
+        class FakeResponse:
+            text = """
+            <table><tbody>
+                <tr>
+                    <td class="subject"><a href="/view?idx=1">버스 입찰공고</a></td>
+                    <td>2026.05.20</td>
+                </tr>
+            </tbody></table>
+            """
+            encoding = ""
+
+            def raise_for_status(self):
+                return None
+
+        def fake_get(*args, **kwargs):
+            calls.append(kwargs)
+            if len(calls) < 3:
+                raise TimeoutError("temporary timeout")
+            return FakeResponse()
+
+        monkeypatch.setattr("collectors.tenders.requests.get", fake_get)
+        monkeypatch.setattr("collectors.tenders.time.sleep", lambda seconds: sleeps.append(seconds))
+
+        site = {
+            "name": "의정부시 고시공고",
+            "url": "https://www.ui4u.go.kr/portal/saeol/gosiList.do",
+            "base": "https://www.ui4u.go.kr/portal/saeol",
+            "ssl": True,
+            "parser": "default",
+            "max_try": 3,
+            "retry_delay": 1,
+            "retry_backoff": 2,
+        }
+
+        notices = fetch_notices(site)
+
+        assert len(notices) == 1
+        assert notices[0]["title"] == "버스 입찰공고"
+        assert len(calls) == 3
+        assert sleeps == [1, 2]
+        assert all(call["timeout"] == 25 for call in calls)
+        assert all(call["verify"] is True for call in calls)
