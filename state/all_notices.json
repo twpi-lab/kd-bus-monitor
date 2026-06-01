@@ -10854,5 +10854,37 @@
     "date": "2026-06-01",
     "site": "가평군 고시공고",
     "collected_at": "2026-06-01 04:27:36"
+  },
+  {
+    "id": "동두천시 고시공고|not_ancmt_mgt_no=44828",
+    "title": "2026년도 상반기 환경개선부담금(독촉분) 공시송달 공고",
+    "link": "https://www.ddc.go.kr/ddc/selectGosiData.do?key=340&not_ancmt_mgt_no=44828&not_ancmt_se_code=04&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-06-01",
+    "site": "동두천시 고시공고",
+    "collected_at": "2026-06-01 05:04:11"
+  },
+  {
+    "id": "고양시 고시공고|not_ancmt_mgt_no=146528",
+    "title": "주민등록 무단전출자 최고 공고",
+    "link": "https://eminwon.goyang.go.kr/emwp/gov/mogaha/ntis/web/ofr/action/OfrAction.do?jndinm=OfrNotAncmtEJB&context=NTIS&method=selectListOfrNotAncmt&methodnm=selectListOfrNotAncmtHomepage&homepage_pbs_yn=Y&subCheck=Y&ofr_pageSize=10&not_ancmt_se_code=01,04,05&title=%EA%B3%A0%EC%8B%9C%EA%B3%B5%EA%B3%A0&initValue=Y&countYn=Y&epcCheck=Y",
+    "date": "2026-06-01",
+    "site": "고양시 고시공고",
+    "collected_at": "2026-06-01 05:04:12"
+  },
+  {
+    "id": "파주시 고시공고|건축물대장 직권말소 공시송달 공고N|2026/06/01",
+    "title": "건축물대장 직권말소 공시송달 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/06/01",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-06-01 05:04:15"
+  },
+  {
+    "id": "남양주시 고시공고|건설공사 안전점검 수행기관 지정 결과 공고[수동면 입석리 284-25번지|2026-06-01",
+    "title": "건설공사 안전점검 수행기관 지정 결과 공고[수동면 입석리 284-25번지 일원 배수관로 신설공사]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87149",
+    "date": "2026-06-01",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-06-01 05:04:14"
   }
 ]
