@@ -351,13 +351,15 @@ def fetch_gg_playwright(site: dict) -> list:
     return notices
 
 
-def fetch_notices(site: dict) -> list:
+def fetch_notices(site: dict) -> tuple:
+    """return: (notices, error). error=None이면 성공, 실패 시 (사이트명, 사유)."""
     if site.get("parser") == "playwright":
         notices = fetch_gg_playwright(site)
         print_preview(site["name"], notices)
         if not notices and not PLAYWRIGHT_OK:
             print("  ⚠️  playwright 미설치 (pip install playwright && playwright install chromium)")
-        return notices
+            return [], (site["name"], "playwright 미설치")
+        return notices, None
 
     headers  = {**BASE_HEADERS, **site.get("extra_headers", {})}
     max_try  = int(site.get("max_try", 3 if site.get("parser") == "molit" else 2))
@@ -387,7 +389,7 @@ def fetch_notices(site: dict) -> list:
                 notices = parse_default(soup, site)
 
             print_preview(site["name"], notices)
-            return notices
+            return notices, None
 
         except Exception as e:
             last_err = e
@@ -397,14 +399,18 @@ def fetch_notices(site: dict) -> list:
     print(f"\n📋 {site['name']}: 0건 확인")
     print(f"  ⚠️  크롤링 오류 ({max_try}회 시도): {last_err}")
     write_log(f"[크롤링오류] {site['name']} | {last_err}")
-    return []
+    return [], (site["name"], str(last_err))
 
 
-def fetch_all() -> list:
-    """모든 사이트 병렬 크롤링 → 공고 리스트 반환"""
+def fetch_all() -> tuple:
+    """모든 사이트 병렬 크롤링 → (공고 리스트, 실패 리스트) 반환.
+    실패 리스트: [(사이트명, 사유), ...]."""
     all_notices = []
+    failed = []
     with ThreadPoolExecutor(max_workers=5) as executor:
         results = executor.map(fetch_notices, MONITOR_URLS)
-        for notices in results:
+        for notices, error in results:
             all_notices.extend(notices)
-    return all_notices
+            if error:
+                failed.append(error)
+    return all_notices, failed

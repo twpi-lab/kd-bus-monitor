@@ -15,6 +15,7 @@ import sys
 import time
 import threading
 from datetime import datetime
+from html import escape as html_escape
 from zoneinfo import ZoneInfo
 
 # Windows 콘솔(cp949)에서도 이모지 출력 가능하도록 UTF-8로 재구성
@@ -29,7 +30,7 @@ import schedule
 from config import ALERT_TIME, MONITOR_URLS, LOG_FILE, SENT_FILE, BUS_KEYWORDS, TENDER_KEYWORDS, EXCLUDE_KEYWORDS
 from collectors.tenders import fetch_all
 from filters import match_keywords, urgency_tag
-from notifier import send_batch
+from notifier import send_batch, send_telegram
 from storage import append_all_notices, load_sent_ids, save_sent_ids, save_run_status, write_log
 
 KST = ZoneInfo("Asia/Seoul")
@@ -60,7 +61,7 @@ def _crawl_store_and_notify_impl():
     print(f"  공고 수집 + 알림 시작: {now}")
     print(f"{'='*60}")
 
-    all_new_notices = fetch_all()
+    all_new_notices, failed_sites = fetch_all()
     total_crawled = len(all_new_notices)
 
     added    = append_all_notices(all_new_notices)
@@ -100,6 +101,7 @@ def _crawl_store_and_notify_impl():
             write_log(f"[묶음발송부분실패] 매칭 {len(matched)}건 중 {failed}건 실패")
 
     save_sent_ids(sent_ids)
+    failed_names = [name for name, _ in failed_sites]
     save_run_status({
         "ran_at_kst": now,
         "weekday": run_dt.weekday(),
@@ -108,7 +110,19 @@ def _crawl_store_and_notify_impl():
         "added": added,
         "matched": len(matched),
         "sent": found,
+        "failed_sites": failed_names,
     })
+
+    # 매 회차 상태 요약 발송 (봇 생존 확인 + 개별 사이트 누락 가시화)
+    summary = (
+        f"✅ <b>[버스 모니터링 점검]</b>\n"
+        f"⏰ {html_escape(now)}\n"
+        f"📡 {len(MONITOR_URLS)}곳 점검 | 신규 {added}건 | 알림 {found}건"
+    )
+    if failed_sites:
+        names = ", ".join(html_escape(name) for name in failed_names)
+        summary += f"\n⚠️ 수집 실패 {len(failed_sites)}곳: {names}"
+    send_telegram(summary)
 
     print(f"\n{'─'*60}")
     print(f"  크롤링: {total_crawled}건 | 새 저장: {added}건 | 알림 발송: {found}건")

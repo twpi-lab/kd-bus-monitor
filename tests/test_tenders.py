@@ -172,11 +172,35 @@ class TestFetchNoticesRetry:
             "retry_backoff": 2,
         }
 
-        notices = fetch_notices(site)
+        notices, error = fetch_notices(site)
 
+        assert error is None
         assert len(notices) == 1
         assert notices[0]["title"] == "버스 입찰공고"
         assert len(calls) == 3
         assert sleeps == [1, 2]
         assert all(call["timeout"] == 25 for call in calls)
         assert all(call["verify"] is True for call in calls)
+
+    def test_all_attempts_fail_returns_error(self, monkeypatch):
+        def always_fail(*args, **kwargs):
+            raise TimeoutError("persistent timeout")
+
+        monkeypatch.setattr("collectors.tenders.requests.get", always_fail)
+        monkeypatch.setattr("collectors.tenders.time.sleep", lambda seconds: None)
+        monkeypatch.setattr("collectors.tenders.write_log", lambda msg: None)
+
+        site = {
+            "name": "의정부시 고시공고",
+            "url": "https://www.ui4u.go.kr/portal/saeol/gosiList.do",
+            "base": "https://www.ui4u.go.kr/portal/saeol",
+            "ssl": True,
+            "parser": "default",
+            "max_try": 2,
+        }
+
+        notices, error = fetch_notices(site)
+
+        assert notices == []
+        assert error is not None
+        assert error[0] == "의정부시 고시공고"
