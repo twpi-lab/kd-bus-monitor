@@ -16862,5 +16862,53 @@
     "date": "2026-06-11",
     "site": "남양주시 고시공고",
     "collected_at": "2026-06-10 16:41:35"
+  },
+  {
+    "id": "경기도 고시공고|도로살얼음 사고예방을 위한 분석시스템 구축 용역|2026-06-10",
+    "title": "도로살얼음 사고예방을 위한 분석시스템 구축 용역",
+    "link": "https://www.gg.go.kr/bbs/boardView.do?bIdx=243614162&bsIdx=469&bcIdx=0&menuId=1547&isManager=false&isCharge=false&page=1",
+    "date": "2026-06-10",
+    "site": "경기도 고시공고",
+    "collected_at": "2026-06-10 23:24:51"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55449",
+    "title": "공유수면 점용 사용 실시계획의 승인 고시(제202606호)",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55449&not_ancmt_se_code=01",
+    "date": "2026-06-11",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-06-10 23:24:51"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55601",
+    "title": "하천점용허가(제2026-70호) 고시",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55601&not_ancmt_se_code=01",
+    "date": "2026-06-11",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-06-10 23:24:51"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55602",
+    "title": "소하천구역 원상회복통보 처분사전통지 공시송달 공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55602&not_ancmt_se_code=01",
+    "date": "2026-06-11",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-06-10 23:24:51"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55604",
+    "title": "「청년 e-브릿지 페스티벌 운영 용역」 제안서 평가위원회 평가 결과 공개",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55604&not_ancmt_se_code=01",
+    "date": "2026-06-11",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-06-10 23:24:51"
+  },
+  {
+    "id": "가평군 고시공고|not_ancmt_mgt_no=55605",
+    "title": "식육즉석판매가공업 신고사항 직권말소 예정 공고",
+    "link": "https://www.gp.go.kr/portal/selectGosiData.do?key=2148&not_ancmt_mgt_no=55605&not_ancmt_se_code=01",
+    "date": "2026-06-11",
+    "site": "가평군 고시공고",
+    "collected_at": "2026-06-10 23:24:51"
   }
 ]
