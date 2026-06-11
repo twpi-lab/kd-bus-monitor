@@ -1,12 +1,13 @@
 {
-  "ran_at_kst": "2026-06-11 08:24:38",
+  "ran_at_kst": "2026-06-11 13:48:34",
   "weekday": 3,
   "is_weekend": false,
-  "total_crawled": 162,
-  "added": 6,
+  "total_crawled": 142,
+  "added": 50,
   "matched": 0,
   "sent": 0,
   "failed_sites": [
+    "대광위 공지사항",
     "의정부시 고시공고"
   ]
 }
