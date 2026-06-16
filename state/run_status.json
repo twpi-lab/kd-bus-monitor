@@ -1,13 +1,12 @@
 {
-  "ran_at_kst": "2026-06-16 20:18:31",
-  "weekday": 1,
+  "ran_at_kst": "2026-06-17 00:04:24",
+  "weekday": 2,
   "is_weekend": false,
-  "total_crawled": 149,
+  "total_crawled": 159,
   "added": 16,
   "matched": 0,
   "sent": 0,
   "failed_sites": [
-    "의정부시 고시공고",
-    "가평군 고시공고"
+    "의정부시 고시공고"
   ]
 }
