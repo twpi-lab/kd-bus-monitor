@@ -1,12 +1,20 @@
 {
-  "ran_at_kst": "2026-06-19 22:33:58",
-  "weekday": 4,
-  "is_weekend": false,
-  "total_crawled": 160,
-  "added": 71,
+  "ran_at_kst": "2026-06-20 07:44:27",
+  "weekday": 5,
+  "is_weekend": true,
+  "total_crawled": 51,
+  "added": 1,
   "matched": 0,
   "sent": 0,
   "failed_sites": [
-    "의정부시 고시공고"
+    "양주시 고시공고",
+    "양주시 입찰공고",
+    "대광위 공지사항",
+    "의정부시 고시공고",
+    "동두천시 고시공고",
+    "포천시 새소식",
+    "고양시 고시공고",
+    "구리시 고시공고",
+    "가평군 고시공고"
   ]
 }
