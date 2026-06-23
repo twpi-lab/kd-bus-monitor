@@ -150,7 +150,7 @@ MONITOR_URLS = [
         "name":       "의정부시 고시공고",
         "url":        "https://www.ui4u.go.kr/portal/saeol/gosiList.do?seCode=01&mId=0301040000",
         "base":       "https://www.ui4u.go.kr/portal/saeol",
-        "ssl":        True,
+        "ssl":        False,
         "max_try":    3,
         "retry_delay": 3,
         "retry_backoff": 2,
