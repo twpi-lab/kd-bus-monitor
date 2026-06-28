@@ -1,9 +1,9 @@
 {
-  "ran_at_kst": "2026-06-28 20:46:07",
-  "weekday": 6,
-  "is_weekend": true,
+  "ran_at_kst": "2026-06-29 07:55:04",
+  "weekday": 0,
+  "is_weekend": false,
   "total_crawled": 51,
-  "added": 0,
+  "added": 7,
   "matched": 0,
   "sent": 0,
   "failed_sites": [
