@@ -28958,5 +28958,109 @@
     "date": "2026-07-01",
     "site": "가평군 고시공고",
     "collected_at": "2026-07-01 12:32:51"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41213",
+    "title": "군관리계획[군계획시설(도로_소로1-전곡46호선)] 결정(변경) 및 실시계획(변경) 인가 고시",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41213&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-02",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-01 23:03:54"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41236",
+    "title": "쓰레기 무단투기 감시카메라(이동식 CCTV) 설치 행정예고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41236&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-02",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-01 23:03:54"
+  },
+  {
+    "id": "파주시 고시공고|농업생산기반시설 사용허가 신청에 따른 관계주민 의견청취 공고N|2026/07/01",
+    "title": "농업생산기반시설 사용허가 신청에 따른 관계주민 의견청취 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/01",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-01 23:04:11"
+  },
+  {
+    "id": "남양주시 고시공고|남양주시 지방공기업 외부회계감사 용역 수행기관 모집 공고|2026-07-02",
+    "title": "남양주시 지방공기업 외부회계감사 용역 수행기관 모집 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87703",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|고시문[공원조성계획 변경(경미한 변경)결정(도곡근린공원)]|2026-07-02",
+    "title": "고시문[공원조성계획 변경(경미한 변경)결정(도곡근린공원)]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87696",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|도로지정(변경) 공고 의뢰[2025-도시건축과-신축신고-98]|2026-07-02",
+    "title": "도로지정(변경) 공고 의뢰[2025-도시건축과-신축신고-98]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87695",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|부동산거래신고 위반 과태료 부과 통지 공시송달 공고|2026-07-02",
+    "title": "부동산거래신고 위반 과태료 부과 통지 공시송달 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87690",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|도시관리계획(경관녹지469호)결정(경미한변경) 및 실시계획인가 주민공람？|2026-07-02",
+    "title": "도시관리계획(경관녹지469호)결정(경미한변경) 및 실시계획인가 주민공람？공고 [GB훼손지 정비사업, 도곡리 223-1번지 일원]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87689",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|도시계획시설(경관녹지484호) 사업시행자(변경) 및 실시계획(변경)인가 |2026-07-02",
+    "title": "도시계획시설(경관녹지484호) 사업시행자(변경) 및 실시계획(변경)인가 고시 [GB훼손지 정비사업, 와부읍 도곡리 867-12번지 일원]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87687",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|도시관리계획(경관녹지486호) 결정(경미한 변경) 및 실시계획인가 고시 |2026-07-02",
+    "title": "도시관리계획(경관녹지486호) 결정(경미한 변경) 및 실시계획인가 고시 [GB훼손지 정비사업, 와부읍 도곡리 661-3번지 일원]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87685",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|사업시행계획(경미한변경)인가 고시 의뢰|2026-07-02",
+    "title": "사업시행계획(경미한변경)인가 고시 의뢰",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87684",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|묵현8지구 도시관리계획결정(변경)(안) 전략환경영향평가(초안) 공청회 개|2026-07-02",
+    "title": "묵현8지구 도시관리계획결정(변경)(안) 전략환경영향평가(초안) 공청회 개최 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87679",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
+  },
+  {
+    "id": "남양주시 고시공고|도시계획시설(경관녹지434호) 사업시행자 지정 및 실시계획인가 주민공람・|2026-07-02",
+    "title": "도시계획시설(경관녹지434호) 사업시행자 지정 및 실시계획인가 주민공람・공고 [GB훼손지 정비사업]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87678",
+    "date": "2026-07-02",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-01 23:04:14"
   }
 ]
