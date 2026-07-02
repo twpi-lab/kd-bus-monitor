@@ -29630,5 +29630,117 @@
     "date": "2026-07-02",
     "site": "남양주시 고시공고",
     "collected_at": "2026-07-02 09:19:20"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41237",
+    "title": "건물번호 폐지 개별고시",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41237&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-03",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-02 22:58:34"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41244",
+    "title": "2026년 지역특화형 비자 사업 공고 (수정)",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41244&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-03",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-02 22:58:34"
+  },
+  {
+    "id": "파주시 고시공고|농업생산기반시설 사용허가 신청에 따른 관계주민 의견청취 공고N|2026/07/02",
+    "title": "농업생산기반시설 사용허가 신청에 따른 관계주민 의견청취 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/02",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-02 22:58:48"
+  },
+  {
+    "id": "파주시 고시공고|「화물자동차 운수사업법」위반 행정처분 통지 공시송달 공고N|2026/07/02",
+    "title": "「화물자동차 운수사업법」위반 행정처분 통지 공시송달 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/02",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-02 22:58:48"
+  },
+  {
+    "id": "파주시 고시공고|경계소하천 관리에 대한 고시N|2026/07/02",
+    "title": "경계소하천 관리에 대한 고시N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/02",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-02 22:58:48"
+  },
+  {
+    "id": "파주시 고시공고|건설기계 정기검사 사전안내 경과안내 검사명령 정비명령 반송분 공시송달 공|2026/07/02",
+    "title": "건설기계 정기검사 사전안내 경과안내 검사명령 정비명령 반송분 공시송달 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/02",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-02 22:58:48"
+  },
+  {
+    "id": "파주시 고시공고|건설기계 검사지연(미필)과태료 처분사전 부과 독촉고지서 반송분 공시송달 |2026/07/02",
+    "title": "건설기계 검사지연(미필)과태료 처분사전 부과 독촉고지서 반송분 공시송달 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/02",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-02 22:58:48"
+  },
+  {
+    "id": "남양주시 고시공고|스마트 버스정류장 CCTV설치 행정예고|2026-07-03",
+    "title": "스마트 버스정류장 CCTV설치 행정예고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87727",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
+  },
+  {
+    "id": "남양주시 고시공고|호평평내행정복지센터 구내식당 임시 기간제근로자 채용(병가 인력대체)|2026-07-03",
+    "title": "호평평내행정복지센터 구내식당 임시 기간제근로자 채용(병가 인력대체)",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87726",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
+  },
+  {
+    "id": "남양주시 고시공고|2026년 클린넷 휴일 전담기동반 단시간근로자 채용공고|2026-07-03",
+    "title": "2026년 클린넷 휴일 전담기동반 단시간근로자 채용공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87718",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
+  },
+  {
+    "id": "남양주시 고시공고|매장유산 재공고[남양주 진접2 공공주택지구 내 유적]|2026-07-03",
+    "title": "매장유산 재공고[남양주 진접2 공공주택지구 내 유적]",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87714",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
+  },
+  {
+    "id": "남양주시 고시공고|주민등록 무단전출자에 대한 주민등록 신고 최고공고|2026-07-03",
+    "title": "주민등록 무단전출자에 대한 주민등록 신고 최고공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87705",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
+  },
+  {
+    "id": "남양주시 고시공고|보상계획 공고〔오남초 통학로 개설공사〕|2026-07-03",
+    "title": "보상계획 공고〔오남초 통학로 개설공사〕",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87629",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
+  },
+  {
+    "id": "남양주시 고시공고|화도읍 도시재생 뉴딜사업 활성화계획 변경(안) 수립을 위한 공청회 공고|2026-07-03",
+    "title": "화도읍 도시재생 뉴딜사업 활성화계획 변경(안) 수립을 위한 공청회 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87279",
+    "date": "2026-07-03",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-02 22:58:49"
   }
 ]

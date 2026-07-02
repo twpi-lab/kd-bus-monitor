@@ -1,9 +1,9 @@
 {
-  "ran_at_kst": "2026-07-02 21:08:05",
-  "weekday": 3,
+  "ran_at_kst": "2026-07-03 07:57:22",
+  "weekday": 4,
   "is_weekend": false,
-  "total_crawled": 41,
-  "added": 0,
+  "total_crawled": 50,
+  "added": 14,
   "matched": 0,
   "sent": 0,
   "failed_sites": [
@@ -13,7 +13,6 @@
     "의정부시 고시공고",
     "동두천시 고시공고",
     "포천시 새소식",
-    "연천군 고시공고",
     "고양시 고시공고",
     "구리시 고시공고",
     "가평군 고시공고"
