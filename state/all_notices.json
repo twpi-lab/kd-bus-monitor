@@ -30550,5 +30550,85 @@
     "date": "2026-07-03",
     "site": "가평군 고시공고",
     "collected_at": "2026-07-03 12:08:06"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41256",
+    "title": "제302회 연천군의회 임시회 제출안건 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41256&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-06",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-05 22:54:32"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41179",
+    "title": "지방세(세외수입) 체납자 압류 자동차 공매공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41179&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-06",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-05 22:54:32"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41169",
+    "title": "지방세 체납자 압류 자동차 공매 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41169&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-06",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-05 22:54:32"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41258",
+    "title": "2026년 밤나무해충 드론 방제 공고",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41258&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-03",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-05 22:54:32"
+  },
+  {
+    "id": "파주시 고시공고|[금촌1동] 통장 공개모집 공고(8통, 19통)N|2026/07/06",
+    "title": "[금촌1동] 통장 공개모집 공고(8통, 19통)N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/06",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-05 22:54:48"
+  },
+  {
+    "id": "남양주시 고시공고|남양주형 통합돌봄 특화서비스(돌봄이음센터) 수행기관 모집 공고|2026-07-06",
+    "title": "남양주형 통합돌봄 특화서비스(돌봄이음센터) 수행기관 모집 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87748",
+    "date": "2026-07-06",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-05 22:54:51"
+  },
+  {
+    "id": "남양주시 고시공고|남양주형 통합돌봄 특화서비스(The돌봄스테이) 수행기관 모집 공고|2026-07-06",
+    "title": "남양주형 통합돌봄 특화서비스(The돌봄스테이) 수행기관 모집 공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87747",
+    "date": "2026-07-06",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-05 22:54:51"
+  },
+  {
+    "id": "남양주시 고시공고|2026년 돌봄 취약가구 반려동물 의료서비스 등 지원 신청 안내(3차)|2026-07-06",
+    "title": "2026년 돌봄 취약가구 반려동물 의료서비스 등 지원 신청 안내(3차)",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87743",
+    "date": "2026-07-06",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-05 22:54:51"
+  },
+  {
+    "id": "남양주시 고시공고|주민등록 무단전출자에 대한 주민등록 신고 최고공고|2026-07-06",
+    "title": "주민등록 무단전출자에 대한 주민등록 신고 최고공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87741",
+    "date": "2026-07-06",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-05 22:54:51"
+  },
+  {
+    "id": "남양주시 고시공고|2026년 맑은 물 사랑 전국학생 사생대회 지방보조사업자 선정 재공고|2026-07-06",
+    "title": "2026년 맑은 물 사랑 전국학생 사생대회 지방보조사업자 선정 재공고",
+    "link": "https://www.nyj.go.kr/www/selectEminwonWebView.do?key=2492&pk=87731",
+    "date": "2026-07-06",
+    "site": "남양주시 고시공고",
+    "collected_at": "2026-07-05 22:54:51"
   }
 ]
