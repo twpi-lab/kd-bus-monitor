@@ -35030,5 +35030,45 @@
     "date": "2026-07-13",
     "site": "가평군 고시공고",
     "collected_at": "2026-07-13 09:33:38"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41312",
+    "title": "「건축법」위반건축물 이행강제금 부과예고 공시송달 공고(○효섭)",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41312&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-13",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-13 12:30:46"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41311",
+    "title": "「건축법」위반건축물 시정명령 공시송달 공고(○흥)",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41311&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-13",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-13 12:30:46"
+  },
+  {
+    "id": "연천군 고시공고|not_ancmt_mgt_no=41310",
+    "title": "「건축법」위반건축물 시정명령 처분사전통지 공시송달 공고(○수길)",
+    "link": "https://www.yeoncheon.go.kr/www/selectGosiData.do?key=3393&not_ancmt_mgt_no=41310&not_ancmt_se_code=01&searchKrwd=&searchCnd=all&pageIndex=1",
+    "date": "2026-07-13",
+    "site": "연천군 고시공고",
+    "collected_at": "2026-07-13 12:30:46"
+  },
+  {
+    "id": "파주시 고시공고|지방세(취득세) 과세예고통지서 공시송달N|2026/07/13",
+    "title": "지방세(취득세) 과세예고통지서 공시송달N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/13",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-13 12:31:05"
+  },
+  {
+    "id": "파주시 고시공고|취득세 및 지역자원시설세 고지서, 독촉고지서 공시송달 공고N|2026/07/13",
+    "title": "취득세 및 지역자원시설세 고지서, 독촉고지서 공시송달 공고N",
+    "link": "https://www.paju.go.kr/user/board/BD_board.list.do?bbsCd=1022&q_ctgCd=4063",
+    "date": "2026/07/13",
+    "site": "파주시 고시공고",
+    "collected_at": "2026-07-13 12:31:05"
   }
 ]
