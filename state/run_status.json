@@ -1,10 +1,12 @@
 {
-  "ran_at_kst": "2026-07-22 20:45:57",
-  "weekday": 2,
+  "ran_at_kst": "2026-07-23 07:53:50",
+  "weekday": 3,
   "is_weekend": false,
-  "total_crawled": 167,
-  "added": 18,
+  "total_crawled": 157,
+  "added": 33,
   "matched": 0,
   "sent": 0,
-  "failed_sites": []
+  "failed_sites": [
+    "의정부시 고시공고"
+  ]
 }
