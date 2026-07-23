@@ -1,12 +1,10 @@
 {
-  "ran_at_kst": "2026-07-23 14:46:42",
+  "ran_at_kst": "2026-07-23 17:35:05",
   "weekday": 3,
   "is_weekend": false,
-  "total_crawled": 149,
-  "added": 39,
+  "total_crawled": 160,
+  "added": 27,
   "matched": 0,
   "sent": 0,
-  "failed_sites": [
-    "고양시 고시공고"
-  ]
+  "failed_sites": []
 }
